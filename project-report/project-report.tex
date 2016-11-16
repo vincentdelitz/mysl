@@ -1,0 +1,87 @@
+\documentclass[11pt,twoside,a4paper]{report}
+\usepackage{graphicx}
+
+\newcommand{\webOrNative}{Web~}
+\renewcommand{\chaptername}{Assignment}
+\setlength{\parskip}{\baselineskip}
+
+\begin{document}
+
+\title{ID2216 Developing Mobile Applications\\Project Report}
+\author{Rafael Aldana (rafaelap@kth.se)\\Vincent Delitz (delitz@kth.se)\\Ruth Eriksson (ruthe@kth.se)}
+\date{\today}
+\maketitle
+
+\newpage
+
+%\begin{abstract}
+%This is the abstract.
+%\end{abstract}
+
+\tableofcontents
+
+%\listoffigures
+
+%\listoftables
+
+\newpage
+
+\chapter{Project proposal}
+
+\section{Introduction}
+
+During the course, we have worked in team to propose, build, and document a mobile app. We have developed a functional \webOrNative application that addresses an interesting and relevant area we have identified. This report describes step-by-step how we designed the mobile application.
+
+\section{Brainstorming}
+
+At the very beginning, we started to think about general hypes and most current usages of mobile applications and tried to define some fields that were interesting to do a more detailed research. Some of these fields were mobility, travel, IoT, sharing, collaboration, big data and digitalization. Of course, this is still too much to get any detailed results or to find a concrete idea for a mobile application.
+
+So the next step was to think of problems that we faced on our own in the daily life, that could be solved by a suitable application. Some outcomes of this are listed in the following:
+
+\begin{itemize}
+	\item Since it is often very hard to find a decent present for someone’s birthday or for Christmas, it would be very useful if there existed an app that suggests suitable presents. This could be done based on the presents or wishes someone has who has similar interests, as the person for whom you are looking for a gift.
+	\item Another idea was, that we could build a portal, where people who have to stay at their home, because they are too old, disabled or injured, can place a groceries list and others can buy these groceries and deliver them for a small fee. Both parties would benefit from it, since old people get their groceries and, for instance, students who buy and deliver it, could earn a little money and do social work.
+	\item Our third idea for a useful application was based on a personal experience of a team member. Since it is quite common in Stockholm that you can sell or buy SL cards for the public transport from other people, there are a lot of offers in Facebook groups or other websites on the internet, but they are not standardized and it is sometimes quite hard to find a suitable ticket. A solution for this would be if there was a portal where people can offer and search for SL cards, that is easy to use and standardized. All three of us agreed, that this idea is worth to spend more time on a deeper research.
+\end{itemize}
+
+\section{Observation-based field study}
+
+After we agreed on a rough idea for our application, we decided to research our application domain, travel and mobility, in more depth. So we tried to observe if and how people use mobile applications while they are travelling with the public transport system.
+
+We chose to observe this behaviour at the Kista station and the central station in Stockholm. Additionally, we put also a focus on buying SL cards and how people use it at the stations. In the following you find our observations:
+
+\begin{itemize}
+	\item Most of the people user their smartphone a lot, while waiting for a train or while walking to the correct line. Unfortunately, it is quite hard to see which exact kind of apps they are using, but many of the people listened to music, seemed to play apps or read the news.
+	\item Many people also use their smartphone to check their route and the time schedules for the trains.
+	\item Sometimes there are long queues at the counters if you want to buy a SL card or recharge it, while the vending machines are not used.
+	\item Some people try to cheat. They do not buy a ticket and just go through the gate after someone who opened it by validating the SL card.
+	\item Many people communicate with others through messaging apps or they are phoning.
+\end{itemize}
+
+After observing the public transport system live, we changed our focus to the Internet and how people try to sell and buy SL cards here. Of course you can buy tickets on the official website of the public transport system, but there are also other ways to buy tickets. We found a lot of Facebook groups where people were posting about SL cards. Each of these offers had a tentative price for the card and the expiring date of it. Other information, like where to pick the card up or if it is a special card for students, was often missing. Furthermore, there was no standardization for the offers and each had its own format. Also on websites, like www.blocket.se, we found offers for SL cards, however still not standardized as it was in the Facebook groups, too. Moreover, from some of the posts you could not recognize clearly if someone is offering or searching for a card. On top of that, it took sometimes quite a while to find an offer for a SL card and looking for a specified period of time was even much harder.
+
+Now, we had found a problem that we wanted to solve with our mobile app, but still we were not sure what potential users thought about it. So we conducted some interviews with friends and family members in order to get their opinion for our idea, get possible new features and if this app could help them. Therefore, we created a set of questions that we asked each participant. These questions started very general about the public transport system in Stockholm and then we narrowed it down to the trade of SL cards. The majority of our interview participants lives permanently in Stockholm, but we also questioned a tourist to cover also this potential user group. The following describes our questions and a summary of the answers
+
+\begin{itemize}
+	\item \textit{How often do you use the public transport system?} Most of the people we questioned and who live in Stockholm use the public transport system almost daily. They use it to get to the university, to their work and also for leisure time activities. Mostly, they take the Tunnelbana and commuter trains, but also busses and Trams. By contrary, the person who does not live permanently in Stockholm, but is every four to five weeks in the city, uses the public transport normally on the weekends or in the holidays.
+	\item \textit{Do you have a 30-days or 90-days ticket?} People who live regularly in Stockholm usually have a 90-days pass and only if they plan to be out of the city, they do not buy 90-day passes. If you are a tourist, you usually don’t buy such a ticket, instead you take a 3-day pass or if your stay is longer a 7-day pass.
+	\item \textit{If you do not have a 30/90-days ticket, do you pay per ride?} We found out, that if someone has a 30/90-days ticket, he does not pay per ride of course, but some tourists who stay in Stockholm for maybe four or five days, buy a 3-day pass and on the other two days they pay per ride. If they know they need to drive often on these days, they just buy a 7-days pass instead, since this is cheaper than two 3-days passes and let just expire the last days of the 7-days ticket.
+	\item \textit{What do you think about the prices for public transport in Stockholm?} The general participants’ perception of the prices, was that it is quite high, especially if you are a student, even though you get a discount. In other European cities you pay way less than in Stockholm. But some also answered, that the reduced price is fair, since you can go anywhere in the city and take any means of transport. If you do not get a discount on the fares, it is really expensive, stated one of the participants. 
+Since we can do nothing about the prices, our point is to solve the problematic of the fact that short period passes (3/7-days) are very expensive compared to 30-days tickets if you consider the price per day. 
+	\item \textit{Do you get any discount on the fares?} Since we mainly questioned students, the majority got discounted fares for the tickets, but there were also people who had to pay the regular price.
+	\item \textit{Have you ever searched for a SL card on the Internet? If yes, how did you find it? Was it easy or laborious?} Some of the participants said that they have not search specifically for a SL card, but they have seen the offers in Facebook groups. If one had searched for a card, he said that it is really laborious to find a suitable ticket, since the offers are spread over different portals and groups and if you found a suitable ticket, it is often really cumbersome to retrieve it from the seller and to communicate with the seller about the details.
+	\item \textit{What do you think about our idea for a platform to trade SL cards? Do you have any suggestions or wishes or is there anything else you want to mention?} Some said that it would be really useful for them if they can rent out their SL cards while they are on vacations. So they would get a little compensate for the time when they are not in town, but still could purchase a 90-day pass. Additionally, all agreed that a seller and buyer would benefit both from this app, the buyer by getting cheaper and more flexible public transport tickets and the seller by getting money if he does not need the SL card anymore.
+
+\section{Proposal}
+
+After all these findings, we decided to build an application that provides its users with the opportunity to offer and search for SL cards. These SL cards have to be, of course, not registered at the carrier in order to make them transferable. This app will be as easy-to-use as possible with a very simple, clear user interface. Within a few steps each user should be able to find or post what he wants. The offers will be kept in a standardized format and users will find all relevant information about an offer in the app. Furthermore, users should be able to get notified if someone has posted an offer for a SL card that fits to a desired pattern. 
+Besides simple selling or buying, users should also have the opportunity to rent and rent out their SL cards. Moreover, user see directly in the app where they can pick up the SL card, if the prices and the period of time is negotiable or not and contact information will also be visible in the app.
+This app will be improved step-by-step with a lot of feedback loops to make it as user-friendly as possible and to adapt to changed requirements from the users. We will start with a paper prototype for a rough understanding, moving onto a web app prototype and then to a native app prototype until we have a working solution.
+
+\end{itemize}
+
+\newpage
+
+\chapter{WebApp prototype}
+
+\end{document}
