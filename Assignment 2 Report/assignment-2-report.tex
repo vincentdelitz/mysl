@@ -1,6 +1,8 @@
 \documentclass[11pt,twoside,a4paper]{report}
+\usepackage[toc,page]{appendix}
 \usepackage{geometry}
 \usepackage{graphicx}
+\usepackage{pdfpages}
 
 % set the default, standard, geometry
 \geometry{left=25mm, right=25mm, top=25mm, bottom=25mm}
@@ -41,23 +43,8 @@ The very first step for creating the paper-based prototype was to think about wh
 
 Furthermore, we tried to incorporate basic design principles of Android applications, so that the user will easily adapt to the usage of our application. Realized was this by using common design pattern of Android apps as well as a really clear structure.
 
-The outcome was that we have had a paper prototype based on eight different views, which had all a quite similiar design and an easy usability in our point of view. See figures \ref{paper prototype 1} and \ref{paper prototype 2} on pages \pageref{paper prototype 1} and \pageref{paper prototype 2} respectively.
+The outcome was that we have had a paper prototype based on eight different views, which had all a quite similiar design and an easy usability in our point of view. See figures \ref{paper prototype 1} and \ref{paper prototype 2} in appendix \ref{chapter:paper-prototype}.
 
-\begin{figure}
-	\centering
-	\includegraphics[width=\textwidth]{Paper_prototype1.jpg}
-	\caption{Paper prototype}
-	\label{paper prototype 1}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=\textwidth]{Paper_prototype2.jpg}
-	\caption{Paper prototype}
-	\label{paper prototype 2}
-\end{figure}
-
-\newpage
 \section{Site-map}
 
 After finalizing the paper-based prototype, we showed it to friends and other potential users in order to gather their impression and feedback. All in all, they liked the first prototype quite much, since it was also very simple and good in their opinion. Nevertheless, some also showed us that we missed little things or could improve the prototype at certain points. Some of the major feedback points we discovered are listed below:
@@ -90,40 +77,45 @@ After finalizing the paper-based prototype, we showed it to friends and other po
 
 \item It would be good to change Pick Up Place for Pick Up Station, if that is restricted to stations, we ensure that the buyer has a chance to check the validity of the card. In addition, it feels safer to meet that way.
 
-
 \end{itemize}
 
-Next, we discussed which of the feedback will be implemented in the next
-prototype and which not. For this new prototype we created the following
-site-map that displays all views/screens of our app structuredly.
-
-\includegraphics[scale=0.65]{sitemap.jpg}
+Next, we discussed which of the feedback will be implemented in the next prototype and which not. For this new prototype we created the following site-map that displays all views and screens of our app structuredly.
 
 \section{Balsamiq prototype}
 
-With the existing site-map, it was time to create a new prototype. This
-time not with a pen and paper, but with the online tool Balsamiq. This
-tool was also aready used to draw the site-map chart. Balsamiq is a quite
-handy and useful tool that allows you to develop prototypes for apps and
-other software in a very fast way by oﬀering drag-and-drop functionality.
-So, we created for each screen at least one wireframe in order to make the
-prototype as real as possible. By using the framework of Balsamiq, we could
-insert a lot of real Android API components, such as the map functionality.
-See some snippets of the result:
+With the existing site-map, it was time to create a new prototype. This time not with a pen and paper, but with the online tool Balsamiq. This tool was also aready used to draw the site-map chart. Balsamiq is a quite handy and useful tool that allows you to develop prototypes for apps and other software in a very fast way by oﬀering drag-and-drop functionality.
 
-\includegraphics[scale=0.3]{home.jpg}
-\includegraphics[scale=0.3]{home2.jpg}
-\includegraphics[scale=0.3]{login.jpg} \\
-\includegraphics[scale=0.3]{newoffer.jpg}
-\includegraphics[scale=0.3]{offerdetails.jpg}
-\includegraphics[scale=0.3]{overview.jpg}
+So, we created for each screen at least one wireframe in order to make the prototype as real as possible. By using the framework of Balsamiq, we could
+insert a lot of real Android API components, such as the map functionality. See figure in appendix \ref{chapter:site-map-and-balsamiq-prototype-figures}.
 
 \section{Clickstream}
 
-After ﬁnishing the Balsamiq prototype, we created additionally a clickstream
-of the current prototype that shows how the user later will travel through
-the app. See the following graphic for the result of the clickstream:
+After finishing the Balsamiq prototype, we created additionally a clickstream of the current prototype that shows how the user later will travel through the app. See figure in appendix \ref{chapter:site-map-and-balsamiq-prototype-figures}.
 
-\includegraphics[scale=0.55]{clickstream.jpg}
+\begin{appendices}
+
+\chapter{Paper prototype}
+\label{chapter:paper-prototype}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{Paper_prototype1.jpg}
+	\caption{Paper prototype}
+	\label{paper prototype 1}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{Paper_prototype2.jpg}
+	\caption{Paper prototype}
+	\label{paper prototype 2}
+\end{figure}
+
+\chapter{Site-map and Balsamiq prototype figures}
+\label{chapter:site-map-and-balsamiq-prototype-figures}
+
+\includepdf[pages={9, 10}, nup=1x2, width=\textwidth]{MySL.pdf}
+
+\end{appendices}
 
 \end{document}

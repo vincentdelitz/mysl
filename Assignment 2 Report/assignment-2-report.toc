@@ -1,5 +1,0 @@
-\contentsline {chapter}{\numberline {1}WebApp prototype}{3}
-\contentsline {section}{\numberline {1.1}Paper prototype}{3}
-\contentsline {section}{\numberline {1.2}Site-map}{6}
-\contentsline {section}{\numberline {1.3}Balsamiq prototype}{7}
-\contentsline {section}{\numberline {1.4}Clickstream}{8}
