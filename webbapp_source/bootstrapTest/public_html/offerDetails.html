@@ -29,11 +29,8 @@
         <![endif]-->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
-        <div class="navbar-header">
-            
-            <a class="navbar-brand">New offer</a>
-            
-            
+        <div class="navbar-header">       
+            <a class="navbar-brand">Offer details</a>            
         </div>
 
         </div><!--/.navbar-collapse -->
@@ -44,107 +41,93 @@
     <div class="row">
         <div class="col-sm-3" >Start</div>
         <div class="col-sm-3" >
-            <div class="form-group">
-                <div class='input-group date' >
-                    <input type='date' class="form-control" />
-                </div>
-            </div>
+            1/11/16
         </div>
     </div>
     
     <div class="row">
         <div class="col-sm-3" >End</div>
         <div class="col-sm-3" >
-            <div class="form-group">
-                <div class='input-group date' >
-                    <div class='input-group date' >
-                        <input type='date' class="form-control" />
-                    </div>
-                </div>
-            </div>
+            3/11/16
         </div>
     </div>
     <div class="row">
         <div class="col-sm-3">Category</div>
         <div class="col-sm-3">
-            <div class="form-group">
-                    <select class="form-control" id="sel1">
-                        <option>Select category</option>
-                        <option>Normal</option>
-                        <option>Student</option>
-                        <option>Young</option>
-                        <option>Old</option>
-                    </select>
-            </div>
+            Student
         </div>
     </div>
     <div class="row">
         <div class="col-sm-3">Price</div>
         <div class="col-sm-3">
-            <div class="form-group">
-                <textarea class="form-control" rows="1" id="price"></textarea>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-3">Pick up place</div>
-        <div class="col-sm-3">
-            <div class="form-group">
-                <textarea class="form-control" rows="1" id="pickupplace"></textarea>
-            </div>
+            100 kr
         </div>
     </div>
     
     <div class="row">
         <div class="col-sm-3" >Pick up date</div>
         <div class="col-sm-3" >
-            <div class="form-group">
-                <div class='input-group date' >
-                    <div class='input-group date' >
-                        <input type='date' class="form-control" />
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script type="text/javascript">
-            $(function () {
-                $('#datepicker4').datetimepicker({
-                    locale: 'ru'
-                });
-            });
-        </script>   
+                31/10/16 
+        </div>   
     </div>
     
     <div class="row">
         <div class="col-sm-3">Saldo on card</div>
         <div class="col-sm-3">
-            <div class="form-group">
-                <textarea class="form-control" rows="1" id="saldo"></textarea>
-            </div>
+            0 kr
         </div>
     </div>
     
     <div class="row">
         <div class="col-sm-3">Flexible dates</div>
-        <div class="col-sm-3">
-            <label class="radio-inline"><input type="radio" name="optradio">yes</label>
-            <label class="radio-inline"><input type="radio" name="optradio">no</label>
+        <div class="col-sm-3">yes</div>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-3">Seller name</div>
+        <div class="col-sm-3">M. Hellström</div>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-3">Phone</div>
+        <div class="col-sm-3">076-123456</div>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-3">Email</div>
+        <div class="col-sm-3">m.hellstroem@gmail.com</div>
+    </div>
+    
+    <div class="row">
+        <div class=col-sm-6>
+        <label for="map">Pick up place</label>
+        <div id="map" style="height:150px"></div>
+        <script>
+        function myMap() {
+        var myLatLng = new google.maps.LatLng(59.403589, 17.942803);
+        var mapCanvas = document.getElementById("map");
+        var mapOptions = {
+            center: myLatLng, 
+            zoom: 10
+        }
+        
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+        
+        
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Kista'
+        });}
+        </script>
         </div>
     </div>
     
     <div class="row">
         <div class="col-sm-6">
-            <div class="form-group">
-                <textarea class="form-control" rows="3" id="additionalinfo" placeholder="Additional information"></textarea>
-            </div>
+            Please write an email first if you are interested in the SL card.
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-6">
-        <button type="button" class="btn btn-primary btn-block">Offer card</button>
-        </div>
-    </div>
-     
     
   
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
@@ -153,6 +136,8 @@
     <script src="js/vendor/bootstrap.min.js"></script>
 
     <script src="js/main.js"></script>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
     
     
     
