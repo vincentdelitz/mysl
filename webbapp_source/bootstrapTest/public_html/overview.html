@@ -17,6 +17,22 @@
                 padding-top: 100px;
                 padding-bottom: 20px;
             }
+			
+			table {
+				font-family: arial, sans-serif;
+				border-collapse: collapse;
+				width: 50%;
+			}
+
+			td, th {
+				border: 1px solid #dddddd;
+				text-align: left;
+				padding: 8px;
+			}
+
+			tr:nth-child(even) {
+				background-color: #dddddd;
+			}
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
@@ -36,13 +52,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="support.html">Support</a>
+          <a class="navbar-brand" href="support.html">New offer</a>
          
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
              <li class = "active"><a href = "search.html">Search</a></li>
-             <li class = "active"><a href = "overview.html">Overview</a></li>
              <li class = "active"><a href = "newOffer.html">New offer</a></li>
               <li class = "active"><a href = "#">Edit profile</a></li>
               <li class = "active"><a href = "support.html">Support</a></li>
@@ -54,29 +69,75 @@
         
         
 
-        </div><!--/.navbar-collapse -->
+        </div>
       </div>
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
-      <div class="container">
-          <div class="span7 text-center"> 
-            <div class="form-group">
-                <textarea class="form-control" rows="10" id="price" placeholder="Enter your feedback or request here please."></textarea>
-            </div>
-        <p><a class="btn btn-primary btn-lg" href="index.html" role="button">Send</a></p>
-        </div> 
-      </div>
-    </div>
+    <div class="container">
+    
+<table>
+  <tr>
+    <th>Start</th>
+    <th>End</th>
+    <th>Cat.</th>
+    <th>Price</th>
+    <th>Pick up</th>
+  </tr>
+  <tr>
+    <td>2016-11-21</td>
+    <td>2016-12-05</td>
+    <td>Student</td>
+    <td>280 kr</td>
+    <td>Roslags Näsby</td>
+  </tr>
+  <tr>
+    <td>2016-11-23</td>
+    <td>2016-12-09</td>
+    <td>Student</td>
+    <td>320 kr</td>
+    <td>Universitetet</td>
+  </tr>
+  <tr>
+    <td>2016-11-25</td>
+    <td>2016-12-13</td>
+    <td>Student</td>
+    <td>360 kr</td>
+    <td>Tekniska Högskolan</td>
+  </tr>
+  <tr>
+    <td>2016-11-27</td>
+    <td>2016-12-17</td>
+    <td>Student</td>
+    <td>400 kr</td>
+    <td>T-Centralen</td>
+  </tr>
+  <tr>
+    <td>2016-11-27</td>
+    <td>2016-12-15</td>
+    <td>Student</td>
+    <td>360 kr</td>
+    <td>Västra skogen</td>
+  </tr>
+  <tr>
+    <td>2016-11-27</td>
+    <td>2016-12-13</td>
+    <td>Student</td>
+    <td>320 kr</td>
+    <td>Kista</td>
+  </tr>
+</table>     
+    
+  
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
+    <script src="js/vendor/bootstrap.min.js"></script>
 
-        <script src="js/vendor/bootstrap.min.js"></script>
-
-        <script src="js/main.js"></script>
-
-        
+    <script src="js/main.js"></script>
+    
+    
+    
     </body>
 </html>
