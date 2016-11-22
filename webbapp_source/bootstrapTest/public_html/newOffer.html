@@ -27,36 +27,39 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="support.html">New offer</a>
-         
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-             <li class = "active"><a href = "search.html">Search</a></li>
-             <li class = "active"><a href = "overview.html">Overview</a></li>
-             <li class = "active"><a href = "newOffer.html">New offer</a></li>
-              <li class = "active"><a href = "#">Edit profile</a></li>
-              <li class = "active"><a href = "support.html">Support</a></li>
-              <li class = "active"><a href = "settings.html">Settings</a></li>
-              <li class = "active"><a href = "#">Log out</a></li>
-            </ul>
-          </div> 
-         
-        
-        
-
-        </div>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+   <div class="container">
+      <div class="navbar-header">
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+         <span class="sr-only">Toggle navigation</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="support.html">New offer</a>
       </div>
-    </nav>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+         <ul class="nav navbar-nav">
+            <li><a href="index.html">Home </a></li>
+             <li><a href="search.html">Search</a></li>
+            <li class="active"><a href="newOffer.html">New offer <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Edit profile</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="#">Log out</a></li>
+         </ul>
+         <form class="form-inline">
+            <div class="form-group">
+               <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+               <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+         </form>
+      </div>
+   </div>
+</nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
