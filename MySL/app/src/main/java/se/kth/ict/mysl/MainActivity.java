@@ -76,9 +76,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -89,9 +87,7 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_search) {
+        if (id == R.id.nav_search) {
 
         } else if (id == R.id.nav_offer) {
 
@@ -112,6 +108,11 @@ public class MainActivity extends AppCompatActivity
 
     public void openSearch(View view) {
         Intent intent = new Intent(this, SearchActivity.class);
+        startActivity(intent);
+    }
+
+    public void openNewOffer(View view) {
+        Intent intent = new Intent(this, NewOfferActivity.class);
         startActivity(intent);
     }
 

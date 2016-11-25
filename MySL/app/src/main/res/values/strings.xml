@@ -5,6 +5,16 @@
     <string name="overview_button">Overview</string>
     <string name="specifysearch_button">Specify search</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="start">Start</string>
+    <string name="end">End</string>
+    <string name="category">Category</string>
+    <string name="price">Price</string>
+    <string name="pickupplace">Pick up place</string>
+    <string name="pickupdate">Pick up date</string>
+    <string name="saldo">Saldo</string>
+    <string name="flexibledates">Flexible dates</string>
+    <string name="additionalinformation">Additional information</string>
+    <string name="offercard_button">Offer card</string>
 
     <string name="menu_search">Search</string>
     <string name="menu_offer">Offer</string>

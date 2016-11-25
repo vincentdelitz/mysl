@@ -28,8 +28,8 @@
 
         <activity
             android:name=".SearchActivity"
-            android:label="Search"
-            ></activity>
+            android:label="Search" />
+        <activity android:name=".NewOfferActivity"></activity>
     </application>
 
 </manifest>
