@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MySL</string>
+    <string name="search_button">Search</string>
+    <string name="offer_button">Offer</string>
 </resources>
