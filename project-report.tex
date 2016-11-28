@@ -1,6 +1,8 @@
 \documentclass[11pt,twoside,a4paper]{report}
+\usepackage{appendix}
 \usepackage{geometry}
 \usepackage{graphicx}
+\usepackage{pdfpages}
 
 % set the default, standard, geometry
 \geometry{left=25mm, right=25mm, top=25mm, bottom=25mm}
@@ -10,9 +12,6 @@
 \hyphenpenalty10000
 \widowpenalty10000
 
-\newcommand{\webOrNative}{Web~}
-\renewcommand{\chaptername}{Assignment}
-
 \begin{document}
 
 \title{ID2216 Developing Mobile Applications\\Project Report}
@@ -20,21 +19,24 @@
 \date{\today}
 \maketitle
 
-\newpage
+\newcommand{\webOrNative}{Web~}
 
 \begin{abstract}
 During the course, we have worked in team to propose, build, and document a mobile app. We have developed a functional \webOrNative application that addresses an interesting and relevant area we have identified. This report describes step-by-step how we designed the mobile application.
 \end{abstract}
 
 \tableofcontents
+\thispagestyle{empty}
 
-%\listoffigures
+\listoffigures
+\thispagestyle{empty}
 
 %\listoftables
 
-\newpage
-
+\renewcommand{\chaptername}{Assignment}
+\setcounter{chapter}{0}
 \chapter{Project proposal}
+\setcounter{page}{1}
 
 \section{Brainstorming}
 
@@ -92,8 +94,155 @@ Besides simple selling or buying, users should also have the opportunity to rent
 
 This app will be improved step-by-step with a lot of feedback loops to make it as user-friendly as possible and to adapt to changed requirements from the users. We will start with a paper prototype for a rough understanding, moving onto a web app prototype and then to a native app prototype until we have a working solution.
 
+\chapter{Web App Prototype}
+
+Once we agreed to develop an application that helps users to find and offer SL cards in the previous assignment, we focused on creating first prototypes and getting a preliminary structure for the application. Therefore, we created a paper-based prototype and collected feedback from potential users and friends.
+
+Based on this, we aimed to create a site map of the different layouts of our application and how the user navigates through our app by creating a clickstream. Additionally, we developed a new digital "paper-based" protoype of our app by using the online tool Balsamiq.
+
+\section{Paper prototype}
+
+The very first step for creating the paper-based prototype was to think about which basic layouts and functionalities does our user need. So, we took a paper and a pencil and started drawing the main views. We discussed a lot about which features are really necessary for the first version of our app, since it must be as slim and lean as possible.
+
+Furthermore, we tried to incorporate basic design principles of Android applications, so that the user will easily adapt to the usage of our application. This was carried out by using common design patterns of Android apps as well as a really clear structure.
+
+The outcome was a paper prototype based on eight different views, all of which had a quite similiar design and an easy usability from our point of view. See figures~\ref{figure:paper-prototype-1} and~\ref{figure:paper-prototype-2} on pages~\pageref{figure:paper-prototype-1} and~\pageref{figure:paper-prototype-2} respectively.
+
+\section{Site map}
+
+After finalizing the paper-based prototype, we showed it to friends and other potential users in order to gather their impression and feedback. All in all, they liked the first prototype quite much, since it was also very simple and good in their opinion. Nevertheless, some also showed us that we missed little things or could improve the prototype at certain points. Some of the major feedback points we discovered are listed below:
+
+\begin{itemize}
+
+\item It would be nice to have start screen with the logo of our app, before reaching the home screen.
+
+\item There should be a "Log out" button in the swipe menu on the left.
+
+\item It would be cool to have settings screen, where you can define the date/time format and the displayed currency.
+
+\item The offer details must definitely contain the user behind the offer and his contact details. Furthermore, it would be good to see how long he has been registered in the app.
+
+\item A support tab in the swipe menu would also be nice, in case there are any questions or feedback for us.
+
+\item As a matter of privacy, there should be an option if people searching for a SL card can see the mobile number of the seller or not. I think if someone sees the email address, this is fine, but the mobile number is quite sensitive.
+
+\item It would be cool to have, maybe in a later stage, also an integrated chat system to contact the seller of a card.
+
+\item It would be nice to see a suggested price for the given validity period.
+
+\item Be sure to implement the insertion of the date with the popup calendar.
+
+\item Why so much data at login? Would not it be enough with username and password to log in?
+
+\item It would be nice to change free text for extra information or comment or something more understandable.
+
+\item Credit is not very clear and could be confuse with Price. What about Saldo?
+
+\item It would be good to change Pick Up Place for Pick Up Station, if that is restricted to stations, we ensure that the buyer has a chance to check the validity of the card. In addition, it feels safer to meet that way.
+
+\end{itemize}
+
+Next, we discussed which of the feedback will be implemented in the next prototype and which not. For this new prototype we created the site map that displays all layouts of our app structuredly. See figure~\ref{figure:site-map} on page~\pageref{figure:site-map}.
+
+\section{Balsamiq prototype}
+
+With the existing site map, it was time to create a new prototype. This time not with a pen and paper, but with the online tool Balsamiq. This tool was also already used to draw the site map chart. Balsamiq is a quite handy and useful tool that allows you to develop prototypes for apps and other software in a very fast way by providing with drag-and-drop functionality.
+
+So, we created for each screen at least one wireframe in order to make the prototype as real as possible. By using the framework of Balsamiq, we could
+insert a lot of real Android API components, such as the map functionality.
+
+\section{Clickstream}
+
+After finishing the Balsamiq prototype, we created additionally a clickstream of the current prototype that shows how the user later will navigate through the app. See figure~\ref{figure:clickstream} on page~\pageref{figure:clickstream}.
+
+\section{Web app prototype}
+
+Based on the feedback we received for the previous prototypes, we created a Webapp prototype. Therefore, we decided to use the Bootstrap framework, since it is quite easy to use for beginners and the results looked pretty reasonable. For distributed developing, we created a git repository to share the code and used Sourcetree to handle the different versions. See figures from~\ref{figure:start-page} to~\ref{figure:settings-page} in appendix~\ref{web-app-prototype-appendix}.
+
+\begin{appendices}
+
+\chapter{Paper prototype figures}
+\thispagestyle{empty}
 \newpage
 
-\chapter{WebApp prototype}
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{jpg/paper-prototype-1.jpg}
+	\caption{Paper prototype figures}
+	\label{figure:paper-prototype-1}
+\end{figure}
 
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{jpg/paper-prototype-2.jpg}
+	\caption{Paper prototype}
+	\label{figure:paper-prototype-2}
+\end{figure}
+
+\chapter{Site map and clickstream figures}
+\thispagestyle{empty}
+\newpage
+
+\begin{figure}
+	\centering
+	\includegraphics[page=9,width=\textwidth]{pdf/balsamiq.pdf}
+	\caption{Site map}
+	\label{figure:site-map}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[page=10,width=\textwidth]{pdf/balsamiq.pdf}
+	\caption{Clickstream}
+	\label{figure:clickstream}
+\end{figure}
+
+\chapter{Web app prototype figures}
+\label{web-app-prototype-appendix}
+\thispagestyle{empty}
+\newpage
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{png/webapp-start.png}
+	\caption{Start page}
+	\label{figure:start-page}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{png/webapp-search.png}
+	\caption{Search page}
+	\label{figure:search-page}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{png/webapp-overview.png}
+	\caption{Overview page}
+	\label{figure:overview-page}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{png/webapp-login.png}
+	\caption{Login page}
+	\label{figure:login-page}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{png/webapp-newoffer.png}
+	\caption{New offer page}
+	\label{figure:new-offer-page}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{png/webapp-settings.png}
+	\caption{Settings page}
+	\label{figure:settings-page}
+\end{figure}
+
+\end{appendices}
 \end{document}
