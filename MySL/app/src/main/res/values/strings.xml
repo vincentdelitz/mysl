@@ -8,10 +8,10 @@
     <string name="start">Start</string>
     <string name="end">End</string>
     <string name="category">Category</string>
-    <string name="price">Price</string>
+    <string name="price">Price (in SEK)</string>
     <string name="pickupplace">Pick up place</string>
     <string name="pickupdate">Pick up date</string>
-    <string name="saldo">Saldo</string>
+    <string name="saldo">Saldo (in SEK)</string>
     <string name="flexibledates">Flexible dates</string>
     <string name="additionalinformation">Additional information</string>
     <string name="offercard_button">Offer card</string>
