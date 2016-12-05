@@ -114,7 +114,8 @@
                 android:layout_below="@+id/textView3"
                 android:ems="10"
                 android:text="@string/category"
-                android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                android:paddingBottom="15dp" />
 
             <Spinner
                 android:id="@+id/spinner"

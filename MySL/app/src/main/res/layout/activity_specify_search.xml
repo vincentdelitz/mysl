@@ -11,7 +11,12 @@
     tools:context="se.kth.ict.mysl.SpecifySearch">
 
 
-
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,7 +39,8 @@
                 android:layout_alignParentTop="true"
                 android:ems="10"
                 android:text="@string/start"
-                android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                android:paddingBottom="50dp" />
 
             <EditText
                 android:id="@+id/editText_spec"
@@ -61,7 +67,8 @@
                 android:layout_below="@+id/textView2"
                 android:ems="10"
                 android:text="@string/end"
-                android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                android:paddingBottom="50dp" />
 
             <EditText
                 android:id="@+id/editText2_spec"
@@ -90,7 +97,8 @@
                 android:layout_below="@+id/textView3"
                 android:ems="10"
                 android:text="@string/category"
-                android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                android:paddingBottom="50dp" />
 
             <Spinner
                 android:id="@+id/spinner_spec"
@@ -98,7 +106,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:addStatesFromChildren="true"
-                android:entries="@array/categories" />
+                android:entries="@array/categories"
+                android:dropDownWidth="match_parent" />
 
 
         </LinearLayout>
@@ -116,7 +125,8 @@
                 android:layout_below="@+id/textView4"
                 android:ems="10"
                 android:text="@string/price"
-                android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                android:paddingBottom="50dp" />
 
             <EditText
                 android:id="@+id/editText3_spec"
@@ -125,6 +135,18 @@
                 android:ems="10"
                 android:hint="Price"
                 android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/editText8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editText2"
+                android:layout_alignStart="@+id/editText2"
+                android:layout_below="@+id/textView3"
+                android:ems="10"
+                android:inputType="date"
+                android:hint="Select a date"
+                android:layout_weight="1" />
 
 
         </LinearLayout>
@@ -142,7 +164,8 @@
                 android:layout_below="@+id/textView8"
                 android:ems="10"
                 android:text="@string/flexibledates"
-                android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                android:paddingBottom="50dp" />
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
@@ -174,14 +197,20 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
     <Button
         android:id="@+id/button5"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_weight="1"
-        android:text="@string/search_button" />
+        android:text="@string/search_button"
+        android:layout_height="match_parent" /></LinearLayout></LinearLayout>
 
 </RelativeLayout>
