@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.FragmentTransaction;
 import android.net.Uri;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -24,9 +26,11 @@ import java.util.Calendar;
 public class NewOfferActivity extends AppCompatActivity {
 
     EditText txtDateEnd, txtDateStart, txtDatePickup;
-    int year_x, month_x, day_x;
+    int year_x,  month_x,  day_x;
     static final int DIALOG_ID = 0;
-
+    static final int DIALOG_ID1 = 1;
+    static final int DIALOG_ID2 = 2;
+    int cur = 99;
 
 
     @Override
@@ -42,6 +46,7 @@ public class NewOfferActivity extends AppCompatActivity {
 
         createCategoriesSpinner();
 
+
     }
 
     public void createCategoriesSpinner() {
@@ -55,34 +60,36 @@ public class NewOfferActivity extends AppCompatActivity {
     }
 
     public void showDialogOnButtonClick() {
-        txtDateEnd = (EditText) findViewById(R.id.editText3);
-
-        txtDateEnd.setOnClickListener(new View.OnClickListener() {
-                                       @Override
-                                       public void onClick(View v) {
-                                           showDialog(DIALOG_ID);
-                                       }
-                                   }
-        );
-
         txtDateStart = (EditText) findViewById(R.id.editText);
 
         txtDateStart.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View v) {
+                                                showDialog(DIALOG_ID);
+                                            }
+                                        }
+        );
+
+        txtDateEnd = (EditText) findViewById(R.id.editText3);
+
+        txtDateEnd.setOnClickListener(new View.OnClickListener() {
                                           @Override
                                           public void onClick(View v) {
-                                              showDialog(DIALOG_ID);
+                                              showDialog(DIALOG_ID1);
                                           }
                                       }
         );
+
+
 
         txtDatePickup = (EditText) findViewById(R.id.editText4);
 
         txtDatePickup.setOnClickListener(new View.OnClickListener() {
-                                          @Override
-                                          public void onClick(View v) {
-                                              showDialog(DIALOG_ID);
-                                          }
-                                      }
+                                             @Override
+                                             public void onClick(View v) {
+                                                 showDialog(DIALOG_ID2);
+                                             }
+                                         }
         );
     }
 
@@ -90,6 +97,15 @@ public class NewOfferActivity extends AppCompatActivity {
     protected Dialog onCreateDialog(int id) {
 
         if (id == DIALOG_ID) {
+            cur = DIALOG_ID;
+            return new DatePickerDialog(this, dpickerListener, year_x, month_x, day_x);
+        }
+        if (id == DIALOG_ID1) {
+            cur = DIALOG_ID1;
+            return new DatePickerDialog(this, dpickerListener, year_x, month_x, day_x);
+        }
+        if (id == DIALOG_ID2) {
+            cur = DIALOG_ID2;
             return new DatePickerDialog(this, dpickerListener, year_x, month_x, day_x);
         }
         return null;
@@ -102,28 +118,20 @@ public class NewOfferActivity extends AppCompatActivity {
             month_x = montOfYear;
             day_x = dayOfMonth;
             String date = day_x + "/" + (month_x + 1) + "/" + year_x;
-            Toast.makeText(NewOfferActivity.this, date, Toast.LENGTH_LONG).show();
-            txtDateEnd.setText(date);
+
+            switch (cur) {
+                case 0:
+                    txtDateStart.setText(date);
+                    break;
+                case 1:
+                    txtDateEnd.setText(date);
+                    break;
+                case 2:
+                    txtDatePickup.setText(date);
+                    break;
+            }
         }
     };
-
-    public void onRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.radioButton:
-                if (checked)
-                    // Pirates are the best
-                    break;
-            case R.id.radioButton2:
-                if (checked)
-                    // Ninjas rule
-                    break;
-        }
-    }
-
 
 
 }
