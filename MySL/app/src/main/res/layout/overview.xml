@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="4">
+    <TableRow>
+        <TextView
+            android:text="Start"
+            android:padding="3dip" />
+        <TextView
+            android:text="End"
+            android:padding="3dip" />
+        <TextView
+            android:text="Category"
+            android:padding="3dip" />
+        <TextView
+            android:text="Price"
+            android:padding="3dip" />
+        <TextView
+            android:text="Pick up"
+            android:padding="3dip" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="2016-11-21"
+            android:padding="3dip" />
+        <TextView
+            android:text="2016-12-05"
+            android:padding="3dip" />
+        <TextView
+            android:text="Student"
+            android:padding="3dip" />
+        <TextView
+            android:text="280 kr"
+            android:padding="3dip" />
+        <TextView
+            android:text="Roslags Näsby"
+            android:padding="3dip" />
+    </TableRow>
+</TableLayout>
