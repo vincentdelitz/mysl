@@ -136,17 +136,7 @@
                 android:hint="Price"
                 android:inputType="numberDecimal" />
 
-            <EditText
-                android:id="@+id/editText8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/editText2"
-                android:layout_alignStart="@+id/editText2"
-                android:layout_below="@+id/textView3"
-                android:ems="10"
-                android:inputType="date"
-                android:hint="Select a date"
-                android:layout_weight="1" />
+
 
 
         </LinearLayout>

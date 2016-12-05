@@ -26,8 +26,10 @@
         <activity
             android:name=".SearchActivity"
             android:label="Search" />
-        <activity android:name=".NewOfferActivity" />
-        <activity android:name=".SpecifySearch"></activity>
+        <activity android:name=".NewOfferActivity"
+            android:label="New offer"/>
+        <activity android:name=".SpecifySearch"
+            android:label="Specify search"></activity>
     </application>
 
 </manifest>
