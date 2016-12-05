@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="4">
+    <TableRow>
+        <TextView
+            android:background="@android:color/white"
+            android:text="Start"
+            android:textStyle="bold"
+            android:padding="3dip" />
+        <TextView
+            android:background="@android:color/white"
+            android:text="End"
+            android:textStyle="bold"
+            android:padding="3dip" />
+        <TextView
+            android:background="@android:color/white"
+            android:text="Category"
+            android:textStyle="bold"
+            android:padding="3dip" />
+        <TextView
+            android:background="@android:color/white"
+            android:text="Price"
+            android:textStyle="bold"
+            android:padding="3dip" />
+        <TextView
+            android:background="@android:color/white"
+            android:text="Pick up"
+            android:textStyle="bold"
+            android:padding="3dip" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="2016-11-21"
+            android:padding="3dip" />
+        <TextView
+            android:text="2016-12-05"
+            android:padding="3dip" />
+        <TextView
+            android:text="Student"
+            android:padding="3dip" />
+        <TextView
+            android:text="280 kr"
+            android:padding="3dip" />
+        <TextView
+            android:text="Roslags Näsby"
+            android:padding="3dip" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:background="@android:color/white"
+            android:text="2016-11-23"
+            android:padding="3dip" />
+        <TextView
+            android:background="@android:color/white"
+            android:text="2016-12-09"
+            android:padding="3dip" />
+        <TextView
+            android:background="@android:color/white"
+            android:text="Student"
+            android:padding="3dip" />
+        <TextView
+            android:background="@android:color/white"
+            android:text="320 kr"
+            android:padding="3dip" />
+        <TextView
+            android:background="@android:color/white"
+            android:text="Universitetet"
+            android:padding="3dip" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="2016-11-25"
+            android:padding="3dip" />
+        <TextView
+            android:text="2016-12-13"
+            android:padding="3dip" />
+        <TextView
+            android:text="Student"
+            android:padding="3dip" />
+        <TextView
+            android:text="360 kr"
+            android:padding="3dip" />
+        <TextView
+            android:text="Tekniska Högskolan"
+            android:padding="3dip" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:background="@android:color/white"
+            android:text="2016-11-27"
+            android:padding="3dip" />
+        <TextView
+            android:background="@android:color/white"
+            android:text="2016-12-17"
+            android:padding="3dip" />
+        <TextView
+            android:background="@android:color/white"
+            android:text="Student"
+            android:padding="3dip" />
+        <TextView
+            android:background="@android:color/white"
+            android:text="400 kr"
+            android:padding="3dip" />
+        <TextView
+            android:background="@android:color/white"
+            android:text="T-Centralen"
+            android:padding="3dip" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="2016-11-27"
+            android:padding="3dip" />
+        <TextView
+            android:text="2016-12-15"
+            android:padding="3dip" />
+        <TextView
+            android:text="Student"
+            android:padding="3dip" />
+        <TextView
+            android:text="360 kr"
+            android:padding="3dip" />
+        <TextView
+            android:text="Västra skogen"
+            android:padding="3dip" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:background="@android:color/white"
+            android:text="2016-11-27"
+            android:padding="3dip" />
+        <TextView
+            android:background="@android:color/white"
+            android:text="2016-12-13"
+            android:padding="3dip" />
+        <TextView
+            android:background="@android:color/white"
+            android:text="Student"
+            android:padding="3dip" />
+        <TextView
+            android:background="@android:color/white"
+            android:text="320 kr"
+            android:padding="3dip" />
+        <TextView
+            android:background="@android:color/white"
+            android:text="Kista"
+            android:padding="3dip" />
+    </TableRow>
+</TableLayout>
