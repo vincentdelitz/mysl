@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -22,14 +23,10 @@ import java.util.Calendar;
 
 public class NewOfferActivity extends AppCompatActivity {
 
-    EditText txtDate;
+    EditText txtDateEnd, txtDateStart, txtDatePickup;
     int year_x, month_x, day_x;
     static final int DIALOG_ID = 0;
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    private GoogleApiClient client;
+
 
 
     @Override
@@ -44,9 +41,7 @@ public class NewOfferActivity extends AppCompatActivity {
         showDialogOnButtonClick();
 
         createCategoriesSpinner();
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+
     }
 
     public void createCategoriesSpinner() {
@@ -60,14 +55,34 @@ public class NewOfferActivity extends AppCompatActivity {
     }
 
     public void showDialogOnButtonClick() {
-        txtDate = (EditText) findViewById(R.id.editText3);
+        txtDateEnd = (EditText) findViewById(R.id.editText3);
 
-        txtDate.setOnClickListener(new View.OnClickListener() {
+        txtDateEnd.setOnClickListener(new View.OnClickListener() {
                                        @Override
                                        public void onClick(View v) {
                                            showDialog(DIALOG_ID);
                                        }
                                    }
+        );
+
+        txtDateStart = (EditText) findViewById(R.id.editText);
+
+        txtDateStart.setOnClickListener(new View.OnClickListener() {
+                                          @Override
+                                          public void onClick(View v) {
+                                              showDialog(DIALOG_ID);
+                                          }
+                                      }
+        );
+
+        txtDatePickup = (EditText) findViewById(R.id.editText4);
+
+        txtDatePickup.setOnClickListener(new View.OnClickListener() {
+                                          @Override
+                                          public void onClick(View v) {
+                                              showDialog(DIALOG_ID);
+                                          }
+                                      }
         );
     }
 
@@ -88,44 +103,27 @@ public class NewOfferActivity extends AppCompatActivity {
             day_x = dayOfMonth;
             String date = day_x + "/" + (month_x + 1) + "/" + year_x;
             Toast.makeText(NewOfferActivity.this, date, Toast.LENGTH_LONG).show();
-            txtDate.setText(date);
+            txtDateEnd.setText(date);
         }
     };
 
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
 
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    public Action getIndexApiAction() {
-        Thing object = new Thing.Builder()
-                .setName("NewOffer Page") // TODO: Define a title for the content shown.
-                // TODO: Make sure this auto-generated URL is correct.
-                .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
-                .build();
-        return new Action.Builder(Action.TYPE_VIEW)
-                .setObject(object)
-                .setActionStatus(Action.STATUS_TYPE_COMPLETED)
-                .build();
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.radioButton:
+                if (checked)
+                    // Pirates are the best
+                    break;
+            case R.id.radioButton2:
+                if (checked)
+                    // Ninjas rule
+                    break;
+        }
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client.connect();
-        AppIndex.AppIndexApi.start(client, getIndexApiAction());
-    }
 
-    @Override
-    public void onStop() {
-        super.onStop();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        AppIndex.AppIndexApi.end(client, getIndexApiAction());
-        client.disconnect();
-    }
 }
