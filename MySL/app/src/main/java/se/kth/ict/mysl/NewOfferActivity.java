@@ -3,10 +3,13 @@ package se.kth.ict.mysl;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.net.Uri;
 import android.provider.MediaStore;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
@@ -42,11 +45,23 @@ public class NewOfferActivity extends AppCompatActivity {
         year_x = cal.get(Calendar.YEAR);
         month_x = cal.get(Calendar.MONTH);
         day_x = cal.get(Calendar.DAY_OF_MONTH);
+
         showDialogOnButtonClick();
-
         createCategoriesSpinner();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     public void createCategoriesSpinner() {
@@ -132,6 +147,11 @@ public class NewOfferActivity extends AppCompatActivity {
             }
         }
     };
+
+    public void openOverview(View view) {
+        Intent intent = new Intent(this,OverviewActivity.class);
+        startActivity(intent);
+    }
 
 
 }

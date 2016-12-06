@@ -32,4 +32,9 @@ public class SearchActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
+    public void openOverview(View view) {
+        Intent intent = new Intent(this,OverviewActivity.class);
+        startActivity(intent);
+    }
 }
