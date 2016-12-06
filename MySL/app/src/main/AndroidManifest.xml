@@ -36,9 +36,11 @@
             android:label="New offer" />
         <activity
             android:name=".SpecifySearch"
-            android:label="Specify search"></activity>
-        <activity android:name=".Overview"
-            android:label="Overview"></activity>
+            android:label="Specify search" />
+        <activity
+            android:name=".Overview"
+            android:label="Overview" />
+        <activity android:name=".SupportActivity"></activity>
     </application>
 
 </manifest>
