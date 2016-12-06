@@ -42,7 +42,7 @@
             android:label="Overview" />
         <activity
             android:name=".SupportActivity"
-            android:labe="Support" />
+            android:label="Support" />
         <activity
             android:name=".SettingsActivity"
             android:label="Settings"></activity>
