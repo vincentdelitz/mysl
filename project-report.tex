@@ -33,7 +33,7 @@ During the course, we have worked in team to propose, build, and document a mobi
 
 %\listoftables
 
-\renewcommand{\chaptername}{Assignment}
+\renewcommand{\chaptername}{Section}
 \setcounter{chapter}{0}
 \chapter{Project proposal}
 \setcounter{page}{1}
@@ -94,7 +94,7 @@ Besides simple selling or buying, users should also have the opportunity to rent
 
 This app will be improved step-by-step with a lot of feedback loops to make it as user-friendly as possible and to adapt to changed requirements from the users. We will start with a paper prototype for a rough understanding, moving onto a web app prototype and then to a native app prototype until we have a working solution.
 
-\chapter{WebApp Prototype}
+\chapter{WebApp prototype}
 
 Once we agreed to develop an application that helps users to find and offer SL cards in the previous assignment, we focused on creating first prototypes and getting a preliminary structure for the application. Therefore, we created a paper-based prototype and collected feedback from potential users and friends.
 
@@ -157,7 +157,7 @@ After finishing the Balsamiq prototype, we created additionally a clickstream of
 
 \section{WebApp prototype}
 
-Based on the feedback we received for the previous prototypes, we created a Webapp prototype. Therefore, we decided to use the Bootstrap framework, since it is quite easy to use for beginners and the results looked pretty reasonable. For distributed developing, we created a git repository to share the code and used Sourcetree to handle the different versions. See figures from~\ref{figure:start-page} to~\ref{figure:settings-page} in appendix~\ref{webapp-prototype-appendix}.
+Based on the feedback we received for the previous prototypes, we created a WebApp prototype. Therefore, we decided to use the Bootstrap framework, since it is quite easy to use for beginners and the results looked pretty reasonable. For distributed developing, we created a git repository to share the code and used Sourcetree to handle the different versions. See figures from~\ref{figure:start-page} to~\ref{figure:settings-page} in appendix~\ref{webapp-prototype-appendix}.
 
 After finalizing the WebApp prototype, we showed it to friends in order to gather their feedback. Some of the major feedback points we discovered are listed below:
 
@@ -179,7 +179,66 @@ After finalizing the WebApp prototype, we showed it to friends in order to gathe
 
 \end{itemize}
 
-We will tackle this feedback in the next assignment.
+\chapter{Android prototype}
+\label{assignment:android-prototype}
+
+\section{Android prototype overview}
+
+Based on our WebApp prototype and its feedback we started to develop an Android prototype using Android Studio. The structure remained basically the same as in the WebApp prototype, and we tried to use Google's Material Design language in order to let the user work with our app from the very beginning comfortably.
+
+To keep an overview of all the changes we used GitHub, as already done for the WebApp prototype, but this time with Android integrated functionality ``VCS''.
+
+To increase the development efficiency, we assigned each team member a certain page of the prototype that he/she had to develop, and later we cared about the transition and connection between them.
+
+\section{Developing tools}
+
+We chose to use Android Studio for several reasons:
+
+\begin{itemize}
+
+\item It is built purposely for Android, while for example Eclipse was built to all-purpose IDE that can be used with any language and platform.
+
+\item It has a really nice interface design perspective where one can view the interface one is are working on and its related components.
+
+\item Compared to Eclipse it is a much smaller IDE, therefore it uses less RAM space and lower CPU speed, so we get a very stable performance with no crashing and unresponsiveness.
+
+\end{itemize}
+
+Screenshots are presented in appendix \ref{appendix:android-prototype-figures}.
+
+\section{Feedback}
+
+After finalizing the mobile prototype, we showed it to some users in order to gather their feedback. Some of the major feedback points that were observed and received are listed below:
+
+\begin{itemize}
+
+\item Could the text on the buttons be larger, maybe in bold?
+
+\item The buttons almost dissapear in bright light, mark them with a sharper colour.
+
+\item Search/offer buttons look similar to overview/specify search buttons which is a bit confusing.
+
+\item Good with the calendar so one does not have to type any date in.
+
+\item A home button on all screens would be convenient.
+
+\end{itemize}
+
+\section{Outlook}
+
+After developing the prototype and analyzing the feedback we obtained, we came up with the following outlook:
+
+\begin{itemize}
+
+\item We plan to improve and implement the map information, so it is easier for users to find a card close to their preferred location.
+
+\item The logo for the app should be seen on all screens.
+
+\item Home or back button on the top menu should be implemented.
+
+\item We also need to decide on back-end tools for the database.
+
+\end{itemize}
 
 \begin{appendices}
 
@@ -264,6 +323,67 @@ We will tackle this feedback in the next assignment.
 	\includegraphics[width=\textwidth]{png/webapp-settings.png}
 	\caption{Settings page}
 	\label{figure:settings-page}
+\end{figure}
+
+\chapter{Android prototype figures}
+\label{appendix:android-prototype-figures}
+\thispagestyle{empty}
+\newpage
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.4\textwidth]{jpg/android-start.jpg}
+	\caption{Start view}
+	\label{figure:start-view}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.4\textwidth]{jpg/android-navigation-drawer.jpg}
+	\caption{Navigation drawer in start view}
+	\label{figure:navigation-drawer-in-start-view}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.4\textwidth]{png/android-login.png}
+	\caption{Login view}
+	\label{figure:navigation-drawer-in-start-view}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.4\textwidth]{jpg/android-search.jpg}
+	\caption{Search view}
+	\label{figure:search-view}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.4\textwidth]{jpg/android-specify-search.jpg}
+	\caption{Specify search view}
+	\label{figure:specify-search-view}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\fcolorbox{black}{black}{\includegraphics[width=0.4\textwidth]{png/android-overview.png}}
+	\caption{Overview}
+	\label{figure:overview}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.4\textwidth]{jpg/android-calendar.jpg}
+	\caption{Calendar view}
+	\label{figure:calendar-view}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.4\textwidth]{jpg/android-offer.jpg}
+	\caption{Offer view}
+	\label{figure:offer-view}
 \end{figure}
 
 \end{appendices}
