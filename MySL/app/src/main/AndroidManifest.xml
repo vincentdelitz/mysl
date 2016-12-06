@@ -45,7 +45,7 @@
             android:labe="Support" />
         <activity
             android:name=".SettingsActivity"
-            android:label="Settings"></activity>
+            android:label="Settings" />
     </application>
 
 </manifest>
