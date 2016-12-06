@@ -45,18 +45,48 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/textview"
-        android:onClick="openNewOffer"
+        android:onClick="openOffer"
         android:text="login" />
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textview"
         android:focusable="true"
-        android:hint="Enter Name"
+        android:hint="Emailaddress"
         android:textColorHighlight="#ff7eff15"
-        android:textColorHint="#ffff25e6" />
+        android:textColorHint="#ffff25e6"
+        android:layout_marginTop="148dp"
+        android:layout_below="@+id/textview"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_alignTop="@+id/editText"
+        android:layout_alignStart="@+id/textview"
+        android:id="@+id/editText9"
+        android:hint="Enter emailadress" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_below="@+id/editText9"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/editText10" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_below="@+id/editText9"
+        android:layout_alignStart="@+id/editText9"
+        android:id="@+id/editText11"
+        android:hint="Enter password" />
 
 </RelativeLayout>

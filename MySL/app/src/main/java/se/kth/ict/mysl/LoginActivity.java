@@ -18,7 +18,6 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void openOffer(View view) {
-
         Intent intent = new Intent(this, NewOfferActivity.class);
         startActivity(intent);
     }
