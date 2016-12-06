@@ -25,10 +25,17 @@
 
         <activity
             android:name=".SearchActivity"
-            android:label="Search" />
-        <activity android:name=".NewOfferActivity"
-            android:label="New offer"/>
-        <activity android:name=".SpecifySearch"
+            android:label="Search"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".NewOfferActivity"
+            android:label="New offer" />
+        <activity
+            android:name=".SpecifySearch"
             android:label="Specify search"></activity>
     </application>
 
