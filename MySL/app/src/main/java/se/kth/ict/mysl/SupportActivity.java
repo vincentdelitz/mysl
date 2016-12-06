@@ -5,6 +5,7 @@ import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 public class SupportActivity extends AppCompatActivity {
@@ -28,7 +29,7 @@ public class SupportActivity extends AppCompatActivity {
         }
     }
 
-    public void sentConfirmation(){
+    public void sentConfirmation(View v){
 
         Context context = getApplicationContext();
         CharSequence text = "Message successfully sent!";

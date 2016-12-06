@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(MainActivity.this, SearchActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_offer) {
-            Intent intent = new Intent(MainActivity.this, NewOfferActivity.class);
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_editprofile) {
 
@@ -103,6 +103,11 @@ public class MainActivity extends AppCompatActivity
 
     public void openNewOffer(View view) {
         Intent intent = new Intent(this, NewOfferActivity.class);
+        startActivity(intent);
+    }
+
+    public void openLogin(View view) {
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
 
