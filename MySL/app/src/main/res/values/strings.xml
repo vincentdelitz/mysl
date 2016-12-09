@@ -40,5 +40,12 @@
         <item>yyyy-mm-dd</item>
     </string-array>
 
+    <string name="fb_login_protocol_scheme">fbAPP_ID</string>
+
+    <string name="facebook_app_id">1797722383817790</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 </resources>
