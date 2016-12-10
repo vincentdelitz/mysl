@@ -11,6 +11,17 @@ public class DataHolder {
     private static String mail = "delitz@kth.se";
     private static String name = "Vincent Delitz";
     private static Bitmap profilepic;
+    private static boolean loggedin = false;
+
+    public static boolean isLoggedin() {
+        return loggedin;
+    }
+
+    public static void setLoggedin(boolean loggedin) {
+        DataHolder.loggedin = loggedin;
+    }
+
+
 
     public static Bitmap getProfilepic() {
         return profilepic;

@@ -81,6 +81,9 @@ public class Login extends Fragment {
             request.setParameters(parameters);
             request.executeAsync();
 
+            Intent intent = new Intent(getActivity(), NewOfferActivity.class);
+            startActivity(intent);
+
         }
 
         @Override

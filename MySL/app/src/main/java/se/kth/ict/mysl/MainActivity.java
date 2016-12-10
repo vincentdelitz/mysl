@@ -20,6 +20,8 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.facebook.FacebookSdk;
+import com.facebook.login.LoginManager;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_main);
 
         if (android.os.Build.VERSION.SDK_INT > 9) {
@@ -98,8 +101,12 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(MainActivity.this, SearchActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_offer) {
-            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-            startActivity(intent);
+            if(DataHolder.isLoggedin()){
+                Intent intent = new Intent(this, NewOfferActivity.class);
+                startActivity(intent);
+            } else {
+                Intent intent = new Intent(this, LoginActivity.class);
+                startActivity(intent);}
         } else if (id == R.id.nav_editprofile) {
 
         } else if (id == R.id.nav_support) {
@@ -109,7 +116,13 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_logout) {
-
+            DataHolder.setLoggedin(false);
+            DataHolder.setMail("");
+            DataHolder.setName("");
+            DataHolder.setProfilepic(null);
+            LoginManager.getInstance().logOut();
+            finish();
+            startActivity(getIntent());
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -128,8 +141,11 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void openLogin(View view) {
+        if(DataHolder.isLoggedin()){
+            openNewOffer(view);
+        } else {
         Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
+        startActivity(intent);}
     }
 
 
