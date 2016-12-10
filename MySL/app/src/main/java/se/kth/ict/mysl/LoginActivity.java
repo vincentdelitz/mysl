@@ -21,8 +21,6 @@ public class LoginActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.login);
-
-
     }
 
     public void openOffer(View view) {

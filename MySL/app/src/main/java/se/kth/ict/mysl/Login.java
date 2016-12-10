@@ -2,9 +2,12 @@ package se.kth.ict.mysl;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,11 +19,19 @@ import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
 import com.facebook.Profile;
 import com.facebook.ProfileTracker;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Arrays;
 
 
@@ -38,6 +49,37 @@ public class Login extends Fragment {
             AccessToken accessToken = loginResult.getAccessToken();
             Profile profile = Profile.getCurrentProfile();
 
+            GraphRequest request = GraphRequest.newMeRequest(loginResult.getAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
+                @Override
+                public void onCompleted(JSONObject object, GraphResponse response) {
+                    Log.v("LoginActivity", response.toString());
+
+                    try {
+
+                        DataHolder.setName(object.getString("name"));
+                        DataHolder.setMail(object.getString("email"));
+
+                        if (object.has("picture")) {
+                            String profilePicUrl = object.getJSONObject("picture").getJSONObject("data").getString("url");
+                            URL facebookProfileURL = new URL(profilePicUrl);
+                            Bitmap profilePic = BitmapFactory.decodeStream(facebookProfileURL.openConnection().getInputStream());
+
+                            DataHolder.setProfilepic(profilePic);
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    } catch (MalformedURLException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+            });
+            Bundle parameters = new Bundle();
+            parameters.putString("fields", "id,name,email,gender,cover,picture.type(large),birthday");
+            request.setParameters(parameters);
+            request.executeAsync();
 
         }
 
@@ -80,6 +122,7 @@ public class Login extends Fragment {
         accessTokenTracker.startTracking();
         profileTracker.startTracking();
 
+
     }
 
     @Override
@@ -96,7 +139,7 @@ public class Login extends Fragment {
 
         LoginButton loginButton = (LoginButton) view.findViewById(R.id.login_button);
         loginButton.setReadPermissions(Arrays.asList(
-                "public_profile", "email", "user_birthday"));
+                "public_profile", "user_location", "email", "user_birthday"));
         loginButton.setFragment(this);
         loginButton.registerCallback(mCallbackManager, mCallback);
     }
