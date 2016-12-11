@@ -1,6 +1,9 @@
 package se.kth.ict.mysl;
 
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.media.Image;
 import android.media.audiofx.BassBoost;
 import android.net.Uri;
@@ -8,6 +11,8 @@ import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -28,6 +33,9 @@ import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 import org.w3c.dom.Text;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -66,6 +74,7 @@ public class MainActivity extends AppCompatActivity
         name.setText(DataHolder.getName());
         profilepic.setImageBitmap(DataHolder.getProfilepic());
 
+
     }
 
     @Override
@@ -101,12 +110,13 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(MainActivity.this, SearchActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_offer) {
-            if(DataHolder.isLoggedin()){
+            if (DataHolder.isLoggedin()) {
                 Intent intent = new Intent(this, NewOfferActivity.class);
                 startActivity(intent);
             } else {
                 Intent intent = new Intent(this, LoginActivity.class);
-                startActivity(intent);}
+                startActivity(intent);
+            }
         } else if (id == R.id.nav_editprofile) {
 
         } else if (id == R.id.nav_support) {
@@ -130,6 +140,7 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+
     public void openSearch(View view) {
         Intent intent = new Intent(this, SearchActivity.class);
         startActivity(intent);
@@ -141,11 +152,12 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void openLogin(View view) {
-        if(DataHolder.isLoggedin()){
+        if (DataHolder.isLoggedin()) {
             openNewOffer(view);
         } else {
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);}
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+        }
     }
 
 
