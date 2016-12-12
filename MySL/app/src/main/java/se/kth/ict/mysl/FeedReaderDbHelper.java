@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 
 public class FeedReaderDbHelper extends SQLiteOpenHelper {
-    private static final String TEXT_TYPE = " TEXT ";
+    private static final String TEXT_TYPE = " TEXT NOT NULL ";
     private static final String COMMA_SEP = " , ";
     private static final String OPEN_BRACKET = " ( ";
     private static final String CLOSE_BRACKET = " ) ";
