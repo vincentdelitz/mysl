@@ -18,37 +18,15 @@ import android.view.View;
  */
 
 public class OverviewActivity extends AppCompatActivity {
-    FeedReaderDbHelper mDbHelper = new FeedReaderDbHelper(getApplicationContext());
+    FeedReaderDbHelper mDbHelper ;
 
-    SQLiteDatabase db = mDbHelper.getReadableDatabase();
+    SQLiteDatabase db ;
 
     // Define a projection that specifies which columns from the database
 // you will actually use after this query.
-    String[] projection = {
-            FeedEntry._ID,
-            FeedEntry.EMAIL,
-            FeedEntry.START_DATE,
-            FeedEntry.END_DATE,
-            FeedEntry.PICKUP_DATE
-    };
+    //String[] projection ;
 
-    // Filter results WHERE "title" = 'My Title'
-    String selection = FeedEntry._ID + " = ?";
-    String[] selectionArgs = {"1"};
 
-    // How you want the results sorted in the resulting Cursor
-    String sortOrder =
-            FeedEntry.START_DATE + " DESC";
-
-    Cursor c = db.query(
-            FeedEntry.TABLE_NAME,                     // The table to query
-            projection,                               // The columns to return
-            selection,                                // The columns for the WHERE clause
-            selectionArgs,                            // The values for the WHERE clause
-            null,                                     // don't group the rows
-            null,                                     // don't filter by row groups
-            sortOrder                                 // The sort order
-    );
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +34,37 @@ public class OverviewActivity extends AppCompatActivity {
         setContentView(R.layout.overview);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        mDbHelper = new FeedReaderDbHelper(getApplicationContext());
+        db = mDbHelper.getReadableDatabase();
+
+        String[] projection = {
+                FeedEntry._ID,
+                FeedEntry.EMAIL,
+                FeedEntry.START_DATE,
+                FeedEntry.END_DATE,
+                FeedEntry.PICKUP_DATE
+        };
+
+        // Filter results WHERE "title" = 'My Title'
+        String selection = FeedEntry._ID + " = ?";
+        String[] selectionArgs = {"1"};
+
+        // How you want the results sorted in the resulting Cursor
+        String sortOrder =
+                FeedEntry.START_DATE + " DESC";
+
+        Cursor c = db.query(
+                FeedEntry.TABLE_NAME,                     // The table to query
+                projection,                               // The columns to return
+                selection,                                // The columns for the WHERE clause
+                selectionArgs,                            // The values for the WHERE clause
+                null,                                     // don't group the rows
+                null,                                     // don't filter by row groups
+                sortOrder                                 // The sort order
+        );
+
+
     }
 
     @Override
