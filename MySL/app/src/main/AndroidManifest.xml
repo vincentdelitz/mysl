@@ -115,13 +115,15 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".OfferDetails"
+        <activity
+            android:name=".OfferDetails"
             android:label="Offer details"
             android:parentActivityName=".OverviewActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".OverviewActivity" />
         </activity>
+        <activity android:name=".Overview2Activity"></activity>
     </application>
 
 </manifest>

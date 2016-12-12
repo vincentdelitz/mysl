@@ -42,7 +42,7 @@ public class NewOfferActivity extends AppCompatActivity {
     static final int DIALOG_ID1 = 1;
     static final int DIALOG_ID2 = 2;
     int cur = 99;
-    FeedReaderDbHelper mDbHelper = new FeedReaderDbHelper(getApplicationContext());
+    FeedReaderDbHelper mDbHelper ; //= new FeedReaderDbHelper(getApplicationContext());
     SQLiteDatabase db;
 
     @Override
@@ -62,6 +62,7 @@ public class NewOfferActivity extends AppCompatActivity {
         db = openOrCreateDatabase("StudentDB", Context.MODE_PRIVATE, null);
         db.execSQL("CREATE TABLE IF NOT EXISTS catalogue(mail TEXT NOT NULL, date_start TEXT NOT NULL, date_end TEXT NOT NULL, date_pickup TEXT NOT NULL);");
 
+        mDbHelper = new FeedReaderDbHelper(getApplicationContext());
     }
 
     @Override
