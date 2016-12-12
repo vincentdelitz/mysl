@@ -81,6 +81,8 @@ public class Login extends Fragment {
             request.setParameters(parameters);
             request.executeAsync();
 
+
+            DataHolder.setLoggedin(true);
             Intent intent = new Intent(getActivity(), NewOfferActivity.class);
             startActivity(intent);
 
