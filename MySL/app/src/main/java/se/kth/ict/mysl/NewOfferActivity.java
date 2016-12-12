@@ -51,6 +51,7 @@ public class NewOfferActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
+        // save data to SQLite database here?
     }
 
     @Override
