@@ -107,7 +107,8 @@ public class SpecifySearch extends AppCompatActivity {
         }
     };
 
-    public void openOverview(View view) {
+   
+    public void openOverviewFromSearch(View view) {
         Intent intent = new Intent(this, OverviewActivity.class);
         startActivity(intent);
     }

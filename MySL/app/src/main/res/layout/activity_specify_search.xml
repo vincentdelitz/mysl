@@ -208,7 +208,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_weight="1"
-                android:onClick="openOverview"
+                android:onClick="openOverviewFromSearch"
                 android:text="@string/search_button" />
         </LinearLayout>
     </LinearLayout>
