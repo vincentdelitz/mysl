@@ -18,6 +18,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
+import android.database.sqlite.SQLiteDatabase;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -34,10 +35,12 @@ public class NewOfferActivity extends AppCompatActivity {
     static final int DIALOG_ID1 = 1;
     static final int DIALOG_ID2 = 2;
     int cur = 99;
+    SQLiteDatabase mydatabase;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        mydatabase = openOrCreateDatabase("mydatabase_name", MODE_PRIVATE, null);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_offer);
 
@@ -51,11 +54,6 @@ public class NewOfferActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-        // save data to SQLite database here?
-        /*
-        Answer Vincent: I am not sure if it is here correct. Acutally, I would save the data to SQLite,
-        when the user clicks on the button. Thus, the code for SQLite should be in the method "openOverview" below.
-         */
     }
 
     @Override
