@@ -8,7 +8,8 @@
             android:background="@android:color/white"
             android:text="Start"
             android:textStyle="bold"
-            android:padding="3dip" />
+            android:padding="3dip"
+            android:onClick="openDetails"/>
         <TextView
             android:background="@android:color/white"
             android:text="End"
