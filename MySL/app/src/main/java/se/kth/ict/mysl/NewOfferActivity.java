@@ -31,7 +31,8 @@ import java.util.Calendar;
 public class NewOfferActivity extends AppCompatActivity {
 
     EditText txtDateEnd, txtDateStart, txtDatePickup;
-    int year_x,  month_x,  day_x;
+    int year_x, month_x, day_x;
+    EditText txtPlacePickup;
     static final int DIALOG_ID = 0;
     static final int DIALOG_ID1 = 1;
     static final int DIALOG_ID2 = 2;
@@ -54,7 +55,7 @@ public class NewOfferActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         db = openOrCreateDatabase("StudentDB", Context.MODE_PRIVATE, null);
-        db.execSQL("CREATE TABLE IF NOT EXISTS catalogue(rollno VARCHAR,name VARCHAR,marks VARCHAR);");
+        db.execSQL("CREATE TABLE IF NOT EXISTS catalogue(mail TEXT NOT NULL, date_start TEXT NOT NULL, date_end TEXT NOT NULL, date_pickup TEXT NOT NULL);");
 
     }
 
@@ -99,7 +100,6 @@ public class NewOfferActivity extends AppCompatActivity {
                                           }
                                       }
         );
-
 
 
         txtDatePickup = (EditText) findViewById(R.id.editText4);
@@ -155,10 +155,9 @@ public class NewOfferActivity extends AppCompatActivity {
 
     public void openOverview(View view) {
 
-        //I would save the data here to SQLite
-//        db.execSQL("INSERT INTO catalogue VALUES('" + editRollno.getText() + "','" + editName.getText() + "','" + editMarks.getText() + "');");
+        db.execSQL("INSERT INTO catalogue VALUES('" + DataHolder.getMail() + "','" + txtDateStart.getText() + "','" + txtDateEnd.getText() + "','" + txtDatePickup.getText() + "');");
 
-        Intent intent = new Intent(this,OverviewActivity.class);
+        Intent intent = new Intent(this, OverviewActivity.class);
         startActivity(intent);
     }
 
