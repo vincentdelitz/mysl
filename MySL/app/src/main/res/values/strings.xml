@@ -43,6 +43,7 @@
     <string name="fb_login_protocol_scheme">fbAPP_ID</string>
 
     <string name="facebook_app_id">1797722383817790</string>
+    <string name="title_activity_maps">Map</string>
 
 
 </resources>

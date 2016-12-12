@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void openOffer(View view) {
-        if ((email.getText().toString().equals("") || password.getText().toString().equals(""))&&!DataHolder.isLoggedin()) {
+        if ((email.getText().toString().equals("") || password.getText().toString().equals("")) && !DataHolder.isLoggedin()) {
             Context context = getApplicationContext();
             CharSequence text = "Email or password missing!";
             int duration = Toast.LENGTH_LONG;
