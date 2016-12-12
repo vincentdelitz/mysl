@@ -52,6 +52,10 @@ public class NewOfferActivity extends AppCompatActivity {
 
 
         // save data to SQLite database here?
+        /*
+        Answer Vincent: I am not sure if it is here correct. Acutally, I would save the data to SQLite,
+        when the user clicks on the button. Thus, the code for SQLite should be in the method "openOverview" below.
+         */
     }
 
     @Override
@@ -150,6 +154,9 @@ public class NewOfferActivity extends AppCompatActivity {
     };
 
     public void openOverview(View view) {
+
+        //I would save the data here to SQLite
+
         Intent intent = new Intent(this,OverviewActivity.class);
         startActivity(intent);
     }
