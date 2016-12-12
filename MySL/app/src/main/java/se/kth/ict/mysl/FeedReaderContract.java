@@ -14,7 +14,7 @@ public final class FeedReaderContract {
 
     /* Inner class that defines the table contents */
     public static class FeedEntry implements BaseColumns {
-        public static final String TABLE_NAME = "Table";
+        public static final String TABLE_NAME = "myTable";
         public static final String EMAIL = "Email";
         public static final String START_DATE = "StartDate";
         public static final String END_DATE = "EndDate";
