@@ -1,11 +1,16 @@
 package se.kth.ict.mysl;
 
+import se.kth.ict.mysl.FeedReaderContract;
+import se.kth.ict.mysl.FeedReaderContract.FeedEntry;
+
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.FragmentTransaction;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v4.app.NavUtils;
@@ -37,8 +42,8 @@ public class NewOfferActivity extends AppCompatActivity {
     static final int DIALOG_ID1 = 1;
     static final int DIALOG_ID2 = 2;
     int cur = 99;
+    FeedReaderDbHelper mDbHelper = new FeedReaderDbHelper(getApplicationContext());
     SQLiteDatabase db;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -155,7 +160,18 @@ public class NewOfferActivity extends AppCompatActivity {
 
     public void openOverview(View view) {
 
-        db.execSQL("INSERT INTO catalogue VALUES('" + DataHolder.getMail() + "','" + txtDateStart.getText() + "','" + txtDateEnd.getText() + "','" + txtDatePickup.getText() + "');");
+        // Gets the data repository in write mode
+        db = mDbHelper.getWritableDatabase();
+
+        // Create a new map of values, where column names are the keys
+        ContentValues values = new ContentValues();
+        values.put(FeedEntry.EMAIL, DataHolder.getMail());
+        values.put(FeedEntry.START_DATE, txtDateStart.getText().toString());
+        values.put(FeedEntry.END_DATE, txtDateEnd.getText().toString());
+        values.put(FeedEntry.PICKUP_DATE, txtDatePickup.getText().toString());
+
+        // Insert the new row, returning the primary key value of the new row
+        long newRowId = db.insert(FeedEntry.TABLE_NAME, null, values);
 
         Intent intent = new Intent(this, OverviewActivity.class);
         startActivity(intent);
