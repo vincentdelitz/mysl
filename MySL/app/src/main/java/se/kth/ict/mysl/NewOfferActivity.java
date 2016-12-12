@@ -3,7 +3,9 @@ package se.kth.ict.mysl;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v4.app.NavUtils;
@@ -18,7 +20,6 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
-import android.database.sqlite.SQLiteDatabase;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -35,12 +36,11 @@ public class NewOfferActivity extends AppCompatActivity {
     static final int DIALOG_ID1 = 1;
     static final int DIALOG_ID2 = 2;
     int cur = 99;
-    SQLiteDatabase mydatabase;
+    SQLiteDatabase db;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        mydatabase = openOrCreateDatabase("mydatabase_name", MODE_PRIVATE, null);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_offer);
 
@@ -53,6 +53,8 @@ public class NewOfferActivity extends AppCompatActivity {
         createCategoriesSpinner();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        db = openOrCreateDatabase("StudentDB", Context.MODE_PRIVATE, null);
+        db.execSQL("CREATE TABLE IF NOT EXISTS catalogue(rollno VARCHAR,name VARCHAR,marks VARCHAR);");
 
     }
 
@@ -154,6 +156,7 @@ public class NewOfferActivity extends AppCompatActivity {
     public void openOverview(View view) {
 
         //I would save the data here to SQLite
+//        db.execSQL("INSERT INTO catalogue VALUES('" + editRollno.getText() + "','" + editName.getText() + "','" + editMarks.getText() + "');");
 
         Intent intent = new Intent(this,OverviewActivity.class);
         startActivity(intent);
