@@ -35,26 +35,27 @@
 \chapter{App web service}
 \label{assignment:app-web-service}
 
-\section{App web service overview}
+\section{Overview}
 
-After we received first feedback from testers for our initial draft of the Android app, we aimed to make it more useful and handy by integrating some web services. We decided to use therefore the Google Maps API, Facebook API and the database technology SQLite. 
+After we received first feedback from testers for our initial draft of the Android app, we aimed to make it more useful and handy by integrating some web services. We decided to use therefore the Google Maps API, Facebook API, and SQLite relational database management system.
 
 \begin{itemize}
-\item The Facebook API was used in order to let users register with their Facebook account in our app, so that they do not necessarily need an extra account for our app. Furthermore, the Facebook API enables us to integrate in the future more and better personalized services for the user.
 
-\item In order to display the location of the pick up place in a more convenient way, we make use of Google Maps API, so that the user can see where on the map the pick up place is located.
+\item The Facebook API was used in order to let users register with their Facebook account in our app, so that they do not need an extra account for our app. Furthermore, the Facebook API enables us to integrate in the future more and better customized services for the user.
 
-\item To store our data in a managable and clear manner, we use SQLite which is a database API optimised for Android applications.
+\item In order to display the location of the pick-up place in a more convenient way, we made use of Google Maps API, so that the user can see where on the map the pick-up place is located.
+
+\item To store our data in a manageable and clear manner, we use SQLite which is a database API optimized for Android applications.
 
 \end{itemize}
 
 \section{Development}
 
-The great benefit of the Facebook API login functionality is that users are generally already logged into their Facebook account on their smartphones. Thus, a single button click in our application is sufficient to authenticate the user and give him access to the new offer screen. This reduces the effort for the user significantly and furthermore, he will stay logged in for the future, unless he does not explicitly log out.
+The great benefit from the Facebook API login functionality is that users are generally already logged into their Facebook account on their smartphones. Thus, a single button click in our application is sufficient to authenticate the user and give him access to the new offer screen. This reduces the effort for the user significantly and furthermore, he will stay logged in for the future, unless he does not explicitly log out.
 
-To realize this feature, we had to firstly register ourselves at the Facebook developer page and had to register our app here. Therefore, we needed to created a dedicated app hash key that is used by Facebook to identify our application. If the user logs himself then in to the app, we receive an access token with which we can retrieve information from the user's profile, such as the name, email address or profile picture in a JSON object. We made use of this information and displayed it in the navigation drawer menu in our MainActivity. 
+To develop this feature, we had to register ourselves at the Facebook developer page first and our app then. Therefore, we needed to create a dedicated app hash key that is used by Facebook to identify our application. Then, if the user logs himself in to the app, we will receive an access token with which we can retrieve information from the user's profile, such as the name, email address, or profile picture in a JSON object. We made use of this information and displayed it in the navigation drawer menu in our MainActivity.
 
-For the display of the pickup place of SL cards, we made use of the Google Maps API. Luckily, Android Studio offers the possibility to create a Google Maps activity right away without by default. That's why we only needed to adapt this activity according to our needs and moreover, register our application at the Google developers web page. 
+For the display of the pick-up place of SL cards, we made use of the Google Maps API. Luckily, Android Studio offers the possibility to create a Google Maps activity right away by default. That is why we only needed to adapt this activity according to our needs and moreover, register our application at the Google developers web page. 
 
 For both Facebook and Google APIs, there is a web dashboard that gives you the possibility to track the usage of the application (see the appendices for screenshots of the websites).
 
@@ -70,7 +71,7 @@ After integrating our Android application with the described APIs, we asked agai
 
 \item It is definetely useful to see if a SL card is already sold, or if you can still buy it.
 
-\item Besides the Facebook login option, you could implement a Google login option as well
+\item Besides the Facebook login option, you could implement a Google login option as well.
 
 \end{itemize}
 
@@ -125,10 +126,9 @@ Through using the various APIs we highly increased the usability of our applicat
 \begin{figure}
 	\centering
 	\fcolorbox{black}{black}{\includegraphics[width=0.4\textwidth]{jpg/google.jpg}}
-	\caption{Integrated Google Maps for the pick up place}
+	\caption{Integrated Google Maps for the pick-up place}
 	\label{figure:overview}
 \end{figure}
-
 
 \end{appendices}
 
