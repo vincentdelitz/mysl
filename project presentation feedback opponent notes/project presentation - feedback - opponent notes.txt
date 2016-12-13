@@ -1,0 +1,12 @@
+as a call receiver, is availability on demand or preconfigured?
+	- not implemented, gathered in the wish list.
+	
+	think of you call a friend because you got such suggestion and he/she is busy. he/she tells you to call him/her back later. does this suggestion go to the end of the queue? does this receiver have a chance to open availability windowns on the app?
+	- not implemented, gathered in the wish list.
+
+ressaldo, as feedback from Pietro for the report
+
+is the SL card transferable? yes
+the app should not maybe participate on any transaction and just facilitate the contact.
+what if (as mentioned in the proposals session) someone buys/sells a card, and then that card gets reported as stolen or lost by the previous owner so that the card is not usable anymore?
+
