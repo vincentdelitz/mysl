@@ -45,7 +45,7 @@ After we received first feedback from testers for our initial draft of the Andro
 
 \item In order to display the location of the pick-up place in a more convenient way, we made use of Google Maps API, so that the user can see where on the map the pick-up place is located.
 
-\item To store our data in a manageable and clear manner, we use SQLite which is a database API optimized for Android applications.
+\item To store our data in a manageable and clear manner, we aimed to use SQLite which is a database API optimized for Android applications.
 
 \end{itemize}
 
@@ -61,6 +61,10 @@ For both Facebook and Google APIs, there is a web dashboard that gives you the p
 
 Since the users usually only gives us the alphabetical name of a location and not the exact coordinates, we had to use the class Geocoder which computes you the coordinates for a location. This data is then sent to the Google Maps API in order to display the location correctly on the map.
 
+Regarding the database management system, we aimed to implement SQLite. We started implementing the creation of tables and insertion of new rows after the input data from the NewOfferActivity. Although the implementation was not fully tested, the written code was compiled and built without errors, so we assume that the input data from the NewOfferActivity was correctly saved at a local level on the phone.
+
+As for the time for the project presentation we did not implemented the readback of rows from the database for populating the output data for the OverviewActivity.
+
 \section{Feedback}
 
 After integrating our Android application with the described APIs, we asked again some users for their opinion about the improved functionality. All in all, they really liked the improvements and found it quite handy. Nevertheless, they still gave us some valuable points to implement in the future, such as:
@@ -73,11 +77,25 @@ After integrating our Android application with the described APIs, we asked agai
 
 \item Besides the Facebook login option, you could implement a Google login option as well.
 
+\item Implement country/region setting instead of date format. Then, date format and currency are bound to each other by such setting.
+
+\item Maybe the app should stay out from economic transactions at all, even from the publication or suggestion of the price for the SL card.
+
+\item To secure the purchase, the app could deliver some kind of digital certified receipt so that in the unlikely event that the seller reports the card from being stolen or lost, the buyer can claim that action.
+
 \end{itemize}
 
-\section{Conclusion and outlook}
+\section{Outlook}
 
 Through using the various APIs we highly increased the usability of our application for the end user. Nevertheless, there are still some open points to tackle, such as the feedback and improvements in the GUI to make our application even more convenient to use.
+
+\section{Further development}
+
+With regard to the database management system, and since we did not implement the readback of rows from the database for populating the output data for the OverviewActivity, we started researching alternatives. For further development, we would definitely go for Firebase instead. 
+
+Firebase is a mobile and web application platform with tools and infrastructure made up of complementary features that can be mixed and matched to fit different needs, for instance, realtime database.
+
+This platform provides a realtime database and backend as a service. The service provides an API that allows application data to be synchronized across clients and stored on Firebase's cloud. Client libraries that enable integration with Android, among other operating systems and programming languages, are provided.
 
 \begin{appendices}
 
