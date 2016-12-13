@@ -37,7 +37,7 @@
 
 \section{App web service overview}
 
-After we received first feedback from tester for our initial draft of the Android app, we aimed to make it more useful and handy by integrating some web services. We decided to use therefore the Google Maps API, Facebook API and the database technology SQLite. 
+After we received first feedback from testers for our initial draft of the Android app, we aimed to make it more useful and handy by integrating some web services. We decided to use therefore the Google Maps API, Facebook API and the database technology SQLite. 
 
 \begin{itemize}
 \item The Facebook API was used in order to let users register with their Facebook account in our app, so that they do not necessarily need an extra account for our app. Furthermore, the Facebook API enables us to integrate in the future more and better personalized services for the user.
@@ -48,11 +48,35 @@ After we received first feedback from tester for our initial draft of the Androi
 
 \end{itemize}
 
-\section{Developing tools}
+\section{Development}
+
+The great benefit of the Facebook API login functionality is that users are generally already logged into their Facebook account on their smartphones. Thus, a single button click in our application is sufficient to authenticate the user and give him access to the new offer screen. This reduces the effort for the user significantly and furthermore, he will stay logged in for the future, unless he does not explicitly log out.
+
+To realize this feature, we had to firstly register ourselves at the Facebook developer page and had to register our app here. Therefore, we needed to created a dedicated app hash key that is used by Facebook to identify our application. If the user logs himself then in to the app, we receive an access token with which we can retrieve information from the user's profile, such as the name, email address or profile picture in a JSON object. We made use of this information and displayed it in the navigation drawer menu in our MainActivity. 
+
+For the display of the pickup place of SL cards, we made use of the Google Maps API. Luckily, Android Studio offers the possibility to create a Google Maps activity right away without by default. That's why we only needed to adapt this activity according to our needs and moreover, register our application at the Google developers web page. 
+
+For both Facebook and Google APIs, there is a web dashboard that gives you the possibility to track the usage of the application (see the appendices for screenshots of the websites).
+
+Since the users usually only gives us the alphabetical name of a location and not the exact coordinates, we had to use the class Geocoder which computes you the coordinates for a location. This data is then sent to the Google Maps API in order to display the location correctly on the map.
 
 \section{Feedback}
 
+After integrating our Android application with the described APIs, we asked again some users for their opinion about the improved functionality. All in all, they really liked the improvements and found it quite handy. Nevertheless, they still gave us some valuable points to implement in the future, such as:
+
+\begin{itemize}
+
+\item Maybe you could use as the main activity the overview screen, so that I can start scrolling and searching for SL cards from the very beginning.
+
+\item It is definetely useful to see if a SL card is already sold, or if you can still buy it.
+
+\item Besides the Facebook login option, you could implement a Google login option as well
+
+\end{itemize}
+
 \section{Conclusion and outlook}
+
+Through using the various APIs we highly increased the usability of our application for the end user. Nevertheless, there are still some open points to tackle, such as the feedback and improvements in the GUI to make our application even more convenient to use.
 
 \begin{appendices}
 
