@@ -1,0 +1,50 @@
+nes (126 sloc)  7.87 KB
+\documentclass[11pt,twoside,a4paper]{report}
+\usepackage{appendix}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+
+% set the default, standard, geometry
+\geometry{left=25mm, right=25mm, top=25mm, bottom=25mm}
+
+\setlength{\parskip}{\baselineskip}
+\clubpenalty10000
+\hyphenpenalty10000
+\widowpenalty10000
+
+\begin{document}
+
+\title{ID2216 Developing Mobile Applications\\ Report}
+\author{Rafael Aldana (rafaelap@kth.se)\\Vincent Delitz (delitz@kth.se)\\Ruth Eriksson (ruthe@kth.se)}
+\date{\today}
+\maketitle
+\section{Introduction}
+Wecall is an application that wants to make people aware of neglected contacts and help to find small 
+windows of opportunity to call and nuture important social connections.
+\section{User experrience}
+When you open the application you get a good overview of your friends, with pictures, in sections.
+Each section is a time frame. This makes it easy to see the contacts you have neglected the most. Alos there
+is a suggestion on top of the page. Each section is scrollable, which is not quite obvious at first. 
+When you click/tap a contact you can se name, phone number, last time called, address and local time. 
+There is also a button for a map feature for the address. The local time feature is verry usefull when 
+you have a lot of friends and family abroad. The map is simple and easy to use yet it has some nice extra 
+features like the map and the time zone information.
+\section{Technical implementaion}
+The application was built with Android Studio and Eclipse and based on existing code. It is great that you 
+were able to find code to repurpose and extend rather than writing all code from scratch. It is good practice
+doing so and hopefully you saved som time and debugging. 
+Did you benefit from using two different development tools? Was Eclipse usefull for your purpose?
+The application reads phonebook information and references contact data including call logs using manifest.permission
+class. This seems to be working with no problem!
+From main view users can open detail view of a contact and view address, phone number, and timezone. Users
+can initiate a call and click/tap a symbol wich launches location based services offered by Goolge. The three 
+implemented interfaces, Google Maps Android, Geocoding and Time Zone seem to work well in the applicationa and look like they
+are well integrated. 
+\section{Design choices}
+Regarding main view, have you thought about making the user able to call a person direct from main view with for example a long click.
+That would eliminate the need of loading detail view and the user would save one click/tap and a wait for a load. The scrollable sections
+are not obvious/selfexplanatory, maybe a symbol or an arrow that shows the user that you can scroll down or up.
+The detail view has information about the contact but the content and the tags melt together because they are the same font and size, 
+maybe make one of them bold or larger.
+Over all great work and idea. Good luck developing!
