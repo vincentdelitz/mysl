@@ -1,0 +1,4 @@
+A1 - No comments
+A2 - Good design, but lack info about web impl details.
+A3 - Good design but thin tech description / reflexion.
+A4 - Okey but rather simple backend solution
