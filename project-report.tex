@@ -27,7 +27,7 @@ During the course, we have worked in team to propose, build, and document a mobi
 
 \renewcommand{\chaptername}{Section}
 \setcounter{chapter}{0}
-\chapter{Project proposal}
+\chapter{Concept}
 
 \section{Brainstorming}
 
@@ -43,7 +43,7 @@ So the next step was to think of problems that we faced on our own in daily life
 
 \section{Observation-based field study}
 
-After we agreed on a rough idea for our application, we decided to research our application domain, travel and mobility, in more depth. So we tried to observe if and how people use mobile applications while they are travelling by public transport.
+After we agreed on a rough idea for our application, we decided to research our application domain, travel, and mobility, in more depth. So we tried to observe if and how people use mobile applications while they are travelling by public transport.
 
 We chose to observe this behaviour at both Kista and Stockholm Central station. Additionally, we also put focus on buying SL cards and how people use it at the station. Our observations are gathered below:
 
@@ -75,7 +75,7 @@ Therefore, we created a set of questions that we asked each participant. These q
 \item \textbf{\textit{What do you think about our idea for a platform to trade SL cards? Do you have any suggestions or wishes or is there anything else you want to mention?}} Some said that it would be really useful for them if they can rent out their SL cards while they are on vacation. So they would get a little compensation for the time they are not in town, but still could purchase a 90-day pass. Additionally, all agreed that both the seller and the buyer would benefit from this app, the buyer by getting cheaper and more flexible public transport tickets and the seller by getting money back if he does not need the SL card anymore.
 \end{itemize}
 
-\section{Proposal}
+\section{Project proposal}
 
 After all these findings, we decided to build an application that provides its users with the opportunity to offer and search for SL cards. These SL cards have to be, of course, not registered at the carrier in order to make them transferable.
 
@@ -84,6 +84,22 @@ This app will be as easy-to-use as possible with a very simple and clear user in
 Besides simple selling or buying, users should also have the opportunity to rent and rent out their SL cards. Moreover, the user will see directly in the app where they can pick up the SL card, whether the prices and the period of time are negotiable and contact information will also be visible in the app.
 
 This app will be improved step-by-step with a lot of feedback loops to make it as user-friendly as possible and to adapt to changed requirements from the users. We will start with a paper prototype for a rough understanding, moving onto a web app prototype and then to a native app prototype until we have a working solution.
+
+\chapter{Go-to-market feasibility}
+
+\section{Technical feasibility}
+
+\section{Economic feasibility}
+
+\section{Legal feasibility}
+
+\section{Operational feasibility}
+
+\section{Schedule feasibility}
+
+\section{Resource feasibility}
+
+\section{Financial feasibility}
 
 \chapter{WebApp prototype}
 
@@ -150,8 +166,6 @@ After finalizing the WebApp prototype, we showed it to friends in order to gathe
 
 \chapter{Android prototype}
 
-\section{Android prototype overview}
-
 Based on our WebApp prototype and its feedback we started to develop an Android prototype using Android Studio. The structure remained basically the same as in the WebApp prototype, and we tried to use Google's Material Design language in order to let the user work with our app from the very beginning comfortably.
 
 To keep an overview of all the changes we used GitHub, as already done for the WebApp prototype, but this time with Android integrated functionality ``VCS''.
@@ -195,8 +209,6 @@ After developing the prototype and analyzing the feedback we obtained, we came u
 
 \chapter{App web service}
 
-\section{Overview}
-
 After we received first feedback from testers for our initial draft of the Android app, we aimed to make it more useful and handy by integrating some web services. We decided to use therefore the Google Maps API, Facebook API, and SQLite relational database management system.
 
 \begin{itemize}
@@ -211,9 +223,7 @@ The great benefit from the Facebook API login functionality is that users are ge
 
 To develop this feature, we had to register ourselves at the Facebook developer page first and our app then. Therefore, we needed to create a dedicated app hash key that is used by Facebook to identify our application. Then, if the user logs himself in to the app, we will receive an access token with which we can retrieve information from the user's profile, such as the name, email address, or profile picture in a JSON object. We made use of this information and displayed it in the navigation drawer menu in our MainActivity.
 
-For the display of the pick-up place of SL cards, we made use of the Google Maps API. Luckily, Android Studio offers the possibility to create a Google Maps activity right away by default. That is why we only needed to adapt this activity according to our needs and moreover, register our application at the Google developers web page. 
-
-For both Facebook and Google APIs, there is a web dashboard that gives you the possibility to track the usage of the application (see the appendices for screenshots of the websites).
+For the display of the pick-up place of SL cards, we made use of the Google Maps API. Luckily, Android Studio offers the possibility to create a Google Maps activity right away by default. That is why we only needed to adapt this activity according to our needs and moreover, register our application at the Google developers web page. For both Facebook and Google APIs, there is a web dashboard that gives you the possibility to track the usage of the application (see the appendices for screenshots of the websites).
 
 Since the users usually only gives us the alphabetical name of a location and not the exact coordinates, we had to use the class Geocoder which computes you the coordinates for a location. This data is then sent to the Google Maps API in order to display the location correctly on the map.
 
