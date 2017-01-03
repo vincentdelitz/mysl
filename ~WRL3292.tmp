@@ -78,7 +78,7 @@ Thus, we created a set of questions that we asked each participant. These questi
 
 \section{Project proposal}
 
-After all these findings, we decided to build an application that provides its users with the opportunity to offer and search for SL cards. These SL cards have to be, of course, not registered at the carrier in order to make them transferable [http://sl.se/sv/info/kundservice/forlustgaranti/registrera/].
+After all these findings, we decided to build an application that provides its users with the opportunity to offer and search for SL cards. These SL cards have to be, of course, not registered at the carrier in order to make them transferable.
 
 This app should be as easy-to-use as possible with a very simple and clear user interface. Within a few steps each user should be able to find or post what he wants. The offers will be kept in a standardized format, and users will find all relevant information about a given offer in the app. Furthermore, users should be able to get notified if someone has posted an offer for a SL card that fits to a desired pattern.
 
@@ -104,7 +104,7 @@ One of the most important concerns about the project is its legal feasibility, s
 
 \chapter{WebApp prototype}
 
-Once we agreed to develop an application that helps users to find and offer SL cards, we focused on creating first prototypes and getting a preliminary structure for the application. Therefore, we created a paper-based prototype and collected feedback from potential users and friends. A paper prototype is a good design practice since it gave us the opportunity to explore problems and solutions without having to focus on low-level details [Mark W. Newman and James A. Landay. 2000. Sitemaps, storyboards, and specifications: a sketch of Web site design practice, DIS '00, 263-274].
+Once we agreed to develop an application that helps users to find and offer SL cards, we focused on creating first prototypes and getting a preliminary structure for the application. Therefore, we created a paper-based prototype and collected feedback from potential users and friends.
 
 Based on this, we aimed to create a site map of the different layouts of our application and clickstream that showed how the user navigates through our app. Additionally, we developed a new digital "paper-based" protoype of our app by using the online tool Balsamiq.
 
@@ -112,7 +112,7 @@ Based on this, we aimed to create a site map of the different layouts of our app
 
 The very first step for creating the paper-based prototype was to think about which basic layouts and functionalities does our user need. So, we took a paper and pencil and started drawing the main views. We discussed a lot about which features are really necessary for the first version of our app, since it must be as slim and lean as possible.
 
-Furthermore, we tried to incorporate basic design principles of Android applications [https://developer.android.com/design/get-started/principles.html], so that the user will easily adapt to the usage of our application. This was carried out by using common design patterns of Android apps as well as a really clear structure.
+Furthermore, we tried to incorporate basic design principles of Android applications, so that the user will easily adapt to the usage of our application. This was carried out by using common design patterns of Android apps as well as a really clear structure.
 
 The outcome was a paper prototype based on eight different views, all of which had a quite similiar design and an easy usability from our point of view. See figures~\ref{figure:paper-prototype-1} and~\ref{figure:paper-prototype-2} on pages~\pageref{figure:paper-prototype-1} and~\pageref{figure:paper-prototype-2} respectively.
 
@@ -136,11 +136,11 @@ After finalizing the paper-based prototype, we showed it to friends and other po
 \item It would be good to change Pick Up Place for Pick Up Station, if that is restricted to stations, we ensure that the buyer has a chance to check the validity of the card. In addition, it feels safer to meet that way.
 \end{itemize}
 
-Next, we discussed which of the feedback should be implemented in the next prototype and which not. Especially, the last bullet point can also be tackled with the app <appname> that is available for Anrdoid. It provides its users a NFC functionality with which you can check the state of a SL card. For the new prototype we created the site map[page 94, Chapter 7: Mobile Information Architecture] that displays all layouts of our app structuredly. See figure~\ref{figure:site-map} on page~\pageref{figure:site-map}.
+Next, we discussed which of the feedback should be implemented in the next prototype and which not. Especially, the last bullet point can also be tackled with the app <appname> that is available for Anrdoid. It provides its users a NFC functionality with which you can check the state of a SL card. For the new prototype we created the site map that displays all layouts of our app structuredly. See figure~\ref{figure:site-map} on page~\pageref{figure:site-map}.
 
 \section{Balsamiq prototype}
 
-With the existing site map, it was time to create a new prototype. Now, not with a pen and paper, but with the online tool Balsamiq. This tool was also already used to draw the site map chart. Balsamiq[] is a quite handy and useful tool that allows you to develop prototypes for apps and other software in a very fast way by providing a drag-and-drop functionality.
+With the existing site map, it was time to create a new prototype. Now, not with a pen and paper, but with the online tool Balsamiq. This tool was also already used to draw the site map chart. Balsamiq is a quite handy and useful tool that allows you to develop prototypes for apps and other software in a very fast way by providing a drag-and-drop functionality.
 
 So, we created for each screen at least one wireframe in order to make the prototype as real as possible. By using the framework of Balsamiq, we could
 insert a lot of real Android components, such as the map functionality.
