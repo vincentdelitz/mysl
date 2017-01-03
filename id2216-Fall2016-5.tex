@@ -13,16 +13,14 @@
 \hyphenpenalty10000
 \widowpenalty10000
 
+\renewcommand{\bibname}{References}
+
 \begin{document}
 
 \title{ID2216 Developing Mobile Applications\\Project Report}
 \author{Rafael Aldana (rafaelap@kth.se)\\Vincent Delitz (delitz@kth.se)\\Ruth Eriksson (ruthe@kth.se)}
 \date{\today}
 \maketitle
-
-\begin{abstract}
-During the course, we have aimed to propose, build, and document a mobile app. Therefore, we have developed a functional application that addresses an interesting and relevant area identified by us. This report describes step-by-step how we designed this mobile application.
-\end{abstract}
 
 \tableofcontents
 
@@ -31,6 +29,8 @@ During the course, we have aimed to propose, build, and document a mobile app. T
 \chapter{Concept}
 
 \section{Brainstorming}
+
+During the course, we have aimed to propose, build, and document a mobile app. Therefore, we have developed a functional application that addresses an interesting and relevant area identified by us. This report describes step-by-step how we designed this mobile application.
 
 At the very beginning, we started to think about general hypes and most current usages of mobile applications and tried to define some fields that were interesting to do a more detailed research. Some of these fields were mobility, travel, IoT, sharing, collaboration, big data, and digitalization. Of course, this was still too much to get any detailed results or to find a concrete idea for a mobile application.
 
@@ -78,7 +78,7 @@ Thus, we created a set of questions that we asked each participant. These questi
 
 \section{Project proposal}
 
-After all these findings, we decided to build an application that provides its users with the opportunity to offer and search for SL cards. These SL cards have to be, of course, not registered at the carrier in order to make them transferable [http://sl.se/sv/info/kundservice/forlustgaranti/registrera/].
+After all these findings, we decided to build an application that provides its users with the opportunity to offer and search for SL cards. These SL cards have to be, of course, not registered at the carrier in order to make them transferable.
 
 This app should be as easy-to-use as possible with a very simple and clear user interface. Within a few steps each user should be able to find or post what he wants. The offers will be kept in a standardized format, and users will find all relevant information about a given offer in the app. Furthermore, users should be able to get notified if someone has posted an offer for a SL card that fits to a desired pattern.
 
@@ -104,7 +104,7 @@ One of the most important concerns about the project is its legal feasibility, s
 
 \chapter{WebApp prototype}
 
-Once we agreed to develop an application that helps users to find and offer SL cards, we focused on creating first prototypes and getting a preliminary structure for the application. Therefore, we created a paper-based prototype and collected feedback from potential users and friends. A paper prototype is a good design practice since it gave us the opportunity to explore problems and solutions without having to focus on low-level details [Mark W. Newman and James A. Landay. 2000. Sitemaps, storyboards, and specifications: a sketch of Web site design practice, DIS '00, 263-274].
+Once we agreed to develop an application that helps users to find and offer SL cards, we focused on creating first prototypes and getting a preliminary structure for the application. Therefore, we created a paper-based prototype and collected feedback from potential users and friends. A paper prototype is a good design practice since it gave us the opportunity to explore problems and solutions without having to focus on low-level details\cite[p. 263-274]{sitemaps}.
 
 Based on this, we aimed to create a site map of the different layouts of our application and clickstream that showed how the user navigates through our app. Additionally, we developed a new digital "paper-based" protoype of our app by using the online tool Balsamiq.
 
@@ -112,7 +112,7 @@ Based on this, we aimed to create a site map of the different layouts of our app
 
 The very first step for creating the paper-based prototype was to think about which basic layouts and functionalities does our user need. So, we took a paper and pencil and started drawing the main views. We discussed a lot about which features are really necessary for the first version of our app, since it must be as slim and lean as possible.
 
-Furthermore, we tried to incorporate basic design principles of Android applications [https://developer.android.com/design/get-started/principles.html], so that the user will easily adapt to the usage of our application. This was carried out by using common design patterns of Android apps as well as a really clear structure.
+Furthermore, we tried to incorporate basic design principles of Android applications\cite{principles}, so that the user will easily adapt to the usage of our application. This was carried out by using common design patterns of Android apps as well as a really clear structure.
 
 The outcome was a paper prototype based on eight different views, all of which had a quite similiar design and an easy usability from our point of view. See figures~\ref{figure:paper-prototype-1} and~\ref{figure:paper-prototype-2} on pages~\pageref{figure:paper-prototype-1} and~\pageref{figure:paper-prototype-2} respectively.
 
@@ -136,7 +136,7 @@ After finalizing the paper-based prototype, we showed it to friends and other po
 \item It would be good to change Pick Up Place for Pick Up Station, if that is restricted to stations, we ensure that the buyer has a chance to check the validity of the card. In addition, it feels safer to meet that way.
 \end{itemize}
 
-Next, we discussed which of the feedback should be implemented in the next prototype and which not. Especially, the last bullet point can also be tackled with the app <appname> that is available for Anrdoid. It provides its users a NFC functionality with which you can check the state of a SL card. For the new prototype we created the site map[page 94, Chapter 7: Mobile Information Architecture] that displays all layouts of our app structuredly. See figure~\ref{figure:site-map} on page~\pageref{figure:site-map}.
+Next, we discussed which of the feedback should be implemented in the next prototype and which not. Especially, the last bullet point can also be tackled with the app ResSaldo that is available for Anrdoid. It provides its users a NFC functionality with which you can check the state of a SL card. For the new prototype we created the site map[page 94, Chapter 7: Mobile Information Architecture] that displays all layouts of our app structuredly. See figure~\ref{figure:site-map} on page~\pageref{figure:site-map}.
 
 \section{Balsamiq prototype}
 
@@ -167,7 +167,11 @@ After finalizing the WebApp prototype, we showed it to friends in order to gathe
 
 \chapter{Android prototype}
 
+<<<<<<< HEAD
 Based on our WebApp prototype and its feedback we started to develop an Android prototype using Android Studio. The structure remained basically the same as in the WebApp prototype, and we tried to use Google's Material Design language [https://material.io/guidelines/] in order to let the user work comfortably with our app from the very beginning.
+=======
+Based on our WebApp prototype and its feedback we started to develop an Android prototype using Android Studio. The structure remained basically the same as in the WebApp prototype, and we tried to use Google's Material Design language\cite{google} in order to let the user work comfortably with our app from the very beginning.
+>>>>>>> 621f751b0d8a41c208ae3f09ec08a3219440688a
 
 To keep an overview of all the changes we used GitHub, as already done for the WebApp prototype, but this time with Android integrated functionality ``VCS''.
 
@@ -462,9 +466,23 @@ All comments itemized in section Settings are welcome and worth to be considered
 \begin{thebibliography}{9}
 
 \bibitem{sl}
-  SL General Sales and Travel Terms and Conditions,\\
-  \url{https://sl.se/contentassets/36a0862a7c6a4c8ba0bf0da30e301043/general_terms_and_conditions_13october2016.pdf},\\
-  13 October 2016.
+SL General Sales and Travel Terms and Conditions,\\
+\url{https://sl.se/contentassets/36a0862a7c6a4c8ba0bf0da30e301043/general_terms_and_conditions_13october2016.pdf},\\
+13 October 2016.
+
+\bibitem{sitemaps}
+Sitemaps, storyboards, and specifications: a sketch of Web site design practice,\\
+Mark W. Newman and James A. Landay,\\
+DIS '00,\\
+2000.
+
+\bibitem{principles}
+Android Design Principles,\\
+\url{https://developer.android.com/design/get-started/principles.html}
+
+\bibitem{google}
+Material design,\\
+\url{https://material.io/guidelines/#} 
 
 \end{thebibliography}
 
